@@ -13,6 +13,16 @@ body {
 .logo {
   height: 50px;
   margin-top: 0.5rem;
+
+  /* Logo pulse animation */
+  animation: pulseAnimation 4s infinite;
+}
+
+/* Logo pulse animation */
+@keyframes pulseAnimation {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
 }
 
 .searchform {
@@ -25,12 +35,12 @@ body {
   margin: -22px 0 0 -170px;
   /* top: 50%;
   width: 339px; */
-  box-shadow: 0 4px 9px rgba(0, 0, 0, 0.37);
-  -moz-box-shadow: 0 4px 9px rgba(0, 0, 0, 0.37);
   -webkit-box-shadow: 0 4px 9px rgba(0, 0, 0, 0.37);
-  border-radius: 10px;
-  -moz-border-radius: 10px;
+  -moz-box-shadow: 0 4px 9px rgba(0, 0, 0, 0.37);
+  box-shadow: 0 4px 9px rgba(0, 0, 0, 0.37);
   -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
 }
 
 .searchform input,
@@ -44,21 +54,21 @@ body {
   margin-right: 5px;
   padding: 10px;
   width: 216px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4) inset,
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4) inset,
     1px 1px 1px rgba(255, 255, 255, 0.75);
   -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4) inset,
     1px 1px 1px rgba(255, 255, 255, 0.75);
-  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.4) inset,
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4) inset,
     1px 1px 1px rgba(255, 255, 255, 0.75);
-  border-radius: 9px;
-  -moz-border-radius: 9px;
   -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
 }
 .searchform input:focus {
   outline: none;
-  box-shadow: 0 0 4px #0d76be inset;
-  -moz-box-shadow: 0 0 4px #0d76be inset;
   -webkit-box-shadow: 0 0 4px #0d76be inset;
+  -moz-box-shadow: 0 0 4px #0d76be inset;
+  box-shadow: 0 0 4px #0d76be inset;
 }
 .searchform input::-webkit-input-placeholder {
   font-style: italic;
@@ -78,10 +88,10 @@ body {
   font: 13px/13px "HelveticaNeue", Helvetica, Arial, sans-serif;
   padding: 10px;
   width: 106px;
-  box-shadow: 0 0 2px rgb(59, 134, 247) inset;
   -moz-box-shadow: 0 0 2px rgb(59, 134, 247) inset;
-  border-radius: 9px;
+  box-shadow: 0 0 2px rgb(59, 134, 247) inset;
   -moz-border-radius: 9px;
+  border-radius: 9px;
 }
 .searchform button:hover {
   opacity: 0.9;
@@ -98,6 +108,7 @@ body {
   background-color: rgb(59, 134, 247);
   color: white;
   height: 33px;
+  transition: box-shadow 0.3s, color 0.3s;
   /* outline: 1px solid black; */
 }
 
@@ -133,4 +144,9 @@ body {
 
 li {
   list-style-type: none;
+}
+
+.user:hover {
+  box-shadow: 0 0 10px rgba(17, 32, 54, 0.7); /* Adjust the glow intensity as desired */
+  color: rgba(8, 27, 138, 0.7); /* Adjust the glow intensity as desired */
 }
