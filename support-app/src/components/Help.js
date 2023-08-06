@@ -1,13 +1,11 @@
-import React from 'react';
+import React from "react";
 
 function Help() {
-    return (
-        <>
-
-     </>
-
-  )
-
+  return (
+    <div>
+      <p>Help page</p>
+    </div>
+  );
 }
 
 export default Help;
