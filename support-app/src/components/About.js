@@ -1,23 +1,21 @@
-import React from "react";
+import React from 'react';
 
-function About() {
+const About = () => {
   return (
     <div>
-      <h1>About</h1>
-      <p className="">
-        Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro.
-        De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo
-        vel maleficia? Zombie ipsum reversus ab viral inferno, nam rick grimes
-        malum cerebro. De carne lumbering animata corpora quaeritis. Summus
-        brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead
-        survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil
-        stalking monstra adventus resi dentevil vultus comedat cerebella
-        viventium. De apocalypsi gorger omero undead survivor dictum mauris. Hi
-        mindless mortuis soulless creaturas, imo evil stalking monstra adventus
-        resi dentevil vultus comedat cerebella viventium.
+      <h2>About Us</h2>
+      <p>Welcome to Support App!</p>
+      <p>
+        Support App is your one-stop solution for finding the best offers and deals. Our mission
+        is to help you save money and get the best value for your purchases.
       </p>
+      <p>
+        Whether you are looking for discounts on electronics, fashion, home appliances, or any
+        other products, Support App has got you covered.
+      </p>
+      <p>Thank you for choosing Support App!</p>
     </div>
   );
-}
+};
 
 export default About;
