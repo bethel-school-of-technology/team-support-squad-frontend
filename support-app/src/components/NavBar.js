@@ -1,6 +1,5 @@
 import React from "react";
 import logo from "../assets/logo.png";
-import tallLogo from "../assets/logoSolo.png";
 import { PiShoppingCartBold } from "react-icons/pi";
 import { FaUserCircle } from "react-icons/fa";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
