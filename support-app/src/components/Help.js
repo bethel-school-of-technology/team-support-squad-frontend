@@ -1,12 +1,12 @@
 import React from 'react';
 
-function Help() {
+const Help = () => {
     return (
-        <>
-
-     </>
-
-  )
+      <div>
+        <h2>Help Center</h2>
+        <p>Welcome to the Help Center. If you have any questions or issues, you're in the right place!</p>
+      </div>
+  );
 
 }
 
