@@ -1,14 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 * {
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
+.App {
+  display: flex;
+  flex-direction: column;
 }
 
-.container {
-  text-align: center;
+::-webkit-scrollbar {
+  height: 12px;
+  width: 12px;
 }
+
+
+::-webkit-scrollbar-track {
+  background: rgb(255, 255, 255, 0.2);
+  border-radius: 1ex;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(59, 134, 247);
+  border-radius: 1ex;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
 
 .logo {
   height: 50px;
@@ -75,9 +93,8 @@ body {
   line-height: 15px;
 }
 
-.searchform input:-moz-placeholder {
-  font-style: italic;
-  line-height: 15px;
+.container {
+  text-align: center;
 }
 
 .searchform button {
