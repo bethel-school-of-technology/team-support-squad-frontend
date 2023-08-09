@@ -5,12 +5,16 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Help from "./components/Help";
 import Hero from "./components/Hero";
+import Slider from "./components/Slider";
+import Supports from "./components/Supports";
 
 function App() {
   return (
     <>
       <Navbar />
       <Hero />
+      <Slider />
+      <Supports />
       <div className="container">
         <Routes>
           <Route path="/" element={<Home />} />
