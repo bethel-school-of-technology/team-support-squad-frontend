@@ -1,4 +1,3 @@
-import h1 from "../assets/h1.jpeg";
 import h3 from "../assets/h3.jpeg";
 import h2 from "../assets/h2.jpeg";
 import h5 from "../assets/h5.jpeg";
@@ -121,7 +120,7 @@ export const ProductsData = [
     details: "19' Alloy Rim",
     price: "30",
     img: img8,
-    type: "Auto",
+    type: "auto",
   },
   {
     name: "WATCH",
@@ -135,7 +134,7 @@ export const ProductsData = [
     details: "Working lawn mower",
     price: "30",
     img: img10,
-    type: "tool",
+    type: "home",
   },
   {
     name: "PHONE",

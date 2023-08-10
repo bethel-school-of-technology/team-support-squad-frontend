@@ -26,9 +26,9 @@ const Slider = () => {
               <div className="name">
                 <span>{slide.name}</span>
                 <span>{slide.detail}</span>
-                <span>${slide.price}</span>
               </div>
-              <div>Shop now</div>
+              <span>${slide.price}</span>
+              <div>Support now</div>
             </div>
             <img src={slide.img} alt="supports" className="img-support" />
           </SwiperSlide>
