@@ -46,6 +46,7 @@
   overflow-y: scroll;
   grid-gap: 2rem;
   justify-content: space-between;
+  margin-bottom: 40px;
 }
 
 .supports {
