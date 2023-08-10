@@ -31,11 +31,48 @@
 
 .cart2 {
   position: absolute;
-  bottom: 25%;
-  right: 5%;
+  bottom: 5%;
+  right: 8%;
   display: flex;
   gap: 1rem;
   align-items: center;
+}
+
+.cart2 > svg {
+  width: 40px;
+  height: 40px;
+  /* margin-bottom: 8px; */
+  background: white;
+  padding: 6px;
+  border-radius: 50%;
+  border: 3px solid rgb(12, 127, 241);
+}
+
+.signup {
+  display: flex;
+  gap: 0.1rem;
+  align-items: center;
+  background-color: white;
+  padding: 8px;
+  font-size: 0.8rem;
+  border-radius: 15px;
+  box-shadow: 2px 3px 6px 1px rgb(66, 64, 64);
+}
+
+.signup > :first-child {
+  display: block;
+  width: 6rem;
+}
+
+.signup > :nth-child(2) {
+  border-radius: 50%;
+  border: 1px solid rgb(0, 106, 255);
+  display: flex;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
 }
 
 .sides {
@@ -43,14 +80,14 @@
   grid-template-rows: 1fr 1fr;
   padding-top: 30px;
   text-align: left;
-  padding-left: 100px;
+  padding-left: 50px;
 }
 .sides {
   display: grid;
   grid-template-rows: 1fr 1fr;
   padding-top: 30px;
   text-align: right;
-  padding-right: 100px;
+  padding-right: 50px;
 }
 
 .text1 {
@@ -72,7 +109,7 @@
 
 .text2 > :first-child {
   font-weight: 800;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
 }
 
 .text2 > :nth-child(2) {
@@ -87,7 +124,7 @@
 
 .traffic > :first-child {
   font-weight: 800;
-  font-size: 2.5rem;
+  font-size: 4.5rem;
 }
 
 .customers {
@@ -98,6 +135,6 @@
 
 .customers > :first-child {
   font-weight: 800;
-  font-size: 2.5rem;
+  font-size: 4.5rem;
   text-align: right;
 }

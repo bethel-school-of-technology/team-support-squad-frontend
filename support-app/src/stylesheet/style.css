@@ -13,7 +13,6 @@
   width: 12px;
 }
 
-
 ::-webkit-scrollbar-track {
   background: rgb(255, 255, 255, 0.2);
   border-radius: 1ex;
@@ -27,6 +26,7 @@
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
+  /* background: rgb(59, 134, 247); */
 }
 
 .logo {
@@ -81,7 +81,7 @@ body {
     1px 1px 1px rgba(255, 255, 255, 0.75);
   -webkit-border-radius: 9px;
   -moz-border-radius: 9px;
-  border-radius: 9px;
+  border-radius: 9px
 }
 .searchform input:focus {
   outline: none;
@@ -98,21 +98,9 @@ body {
   text-align: center;
 }
 
-.searchform button {
-  background: rgb(59, 134, 247);
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  font: 13px/13px "HelveticaNeue", Helvetica, Arial, sans-serif;
-  padding: 10px;
-  width: 106px;
-  -moz-box-shadow: 0 0 2px rgb(59, 134, 247) inset;
-  box-shadow: 0 0 2px rgb(59, 134, 247) inset;
-  -moz-border-radius: 9px;
-  border-radius: 9px;
-}
-.searchform button:hover {
-  opacity: 0.9;
+.logo {
+  height: 50px;
+  margin-top: 0.5rem;
 }
 
 .user {
@@ -126,7 +114,6 @@ body {
   background-color: rgb(59, 134, 247);
   color: white;
   height: 33px;
-  transition: box-shadow 0.3s, color 0.3s;
   /* outline: 1px solid black; */
 }
 
@@ -136,7 +123,7 @@ body {
 }
 
 .nav {
-  /* background-color: rgb(217, 88, 88); */
+  background-color: white;
   color: black;
   display: flex;
   justify-content: space-between;
@@ -162,9 +149,4 @@ body {
 
 li {
   list-style-type: none;
-}
-
-.user:hover {
-  box-shadow: 0 0 10px rgba(17, 32, 54, 0.7); /* Adjust the glow intensity as desired */
-  color: rgba(8, 27, 138, 0.7); /* Adjust the glow intensity as desired */
 }

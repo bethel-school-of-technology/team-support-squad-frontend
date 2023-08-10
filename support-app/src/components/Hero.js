@@ -17,17 +17,21 @@ function Hero() {
         </div>
       </div>
       {/* middle */}
+
       <div className="wrapper">
         <div className="bg"></div>
         <img src={HeroImg} alt="" width={600} />
         <div className="cart2">
           <CgShoppingBag />
-          <div className="signUp">
-            <span>Signup Now</span>
+          <div className="signup">
+            <span>Signup Now!</span>
+            <div>
+              <BiRightArrow />
+            </div>
           </div>
-          <BiRightArrow />
         </div>
       </div>
+
       {/* rightSide */}
       <div className="sides">
         <div className="traffic">
