@@ -21,6 +21,7 @@
 
 .r-wrapper > :nth-child(3) {
   text-align: right;
+  margin-right: 60px;
 }
 
 .r-container {
@@ -34,12 +35,14 @@
   font-weight: 900;
   text-transform: uppercase;
   display: block;
+  margin-left: 60px;
 }
 
 .r-container > :nth-child(2) {
   font-size: 0.8rem;
   text-transform: uppercase;
   display: block;
+  margin-left: 60px;
 }
 
 .supporters {
