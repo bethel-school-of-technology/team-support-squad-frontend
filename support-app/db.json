@@ -11,10 +11,18 @@
     {
       "id": 2,
       "name": "Item 2",
-      "description": "Description of Item 2",
-      "price": 19.99,
+      "description": "New Description of Item 2",
+      "price": 17.99,
       "image": "item2.jpg",
-      "address": "456 Elm St"
+      "address": "46 Elm St"
+    },
+    {
+      "name": "Item 3",
+      "description": "Description of Item 3",
+      "price": "12.99",
+      "image": "item3.jpg",
+      "address": "987 Elmo St",
+      "id": 3
     }
   ]
 }
