@@ -10,6 +10,9 @@ import Supports from "./components/Supports";
 import Update from "./CRUD/Update";
 import Create from "./CRUD/Create"
 import { ItemContextProvider } from "./context/ItemContext";
+import Reviews from "./components/Reviews";
+import Footer from "./components/Footer";
+
 
 function App() {
 
