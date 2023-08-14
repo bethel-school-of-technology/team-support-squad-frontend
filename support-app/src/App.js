@@ -5,11 +5,10 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Help from "./components/Help";
 import Update from "./CRUD/Update";
-import Create from "./CRUD/Create"
+import Create from "./CRUD/Create";
 import { ItemContextProvider } from "./context/ItemContext";
 
 function App() {
-
   const handleCancel = () => {
     console.log("Cancel button clicked");
   };
@@ -21,11 +20,14 @@ function App() {
     <ItemContextProvider>
       <>
         <Navbar />
-        <div className="container">
+        <div className="app-container">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/create" element={<Create />} />
-            <Route path="/update/:id" element={<Update onCancel={handleCancel} onEdit={handleEdit} />} />
+            <Route
+              path="/update/:id"
+              element={<Update onCancel={handleCancel} onEdit={handleEdit} />}
+            />
             <Route path="/about" element={<About />} />
             <Route path="/help" element={<Help />} />
           </Routes>
