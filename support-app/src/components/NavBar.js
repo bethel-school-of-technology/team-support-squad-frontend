@@ -17,14 +17,16 @@ function NavBar() {
         <div>
           <form class="searchform cf">
             <input type="text" placeholder="Find more to support!" />
-            <button type="submit">Search</button>
+            <button type="submit" className="search">
+              Search
+            </button>
           </form>
 
           {/* rightSide */}
         </div>
         <ul>
-          <CustomLink to="/about">About Us</CustomLink>
-          |
+          <CustomLink to="/home">Home</CustomLink>|
+          <CustomLink to="/about">About Us</CustomLink>|
           <CustomLink to="/help">Help</CustomLink>
           <br></br>
           <CustomLink to="/sign">

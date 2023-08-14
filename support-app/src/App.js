@@ -4,15 +4,9 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
 import Help from "./components/Help";
-import Hero from "./components/Hero";
-import Slider from "./components/Slider";
-import Supports from "./components/Supports";
 import Update from "./CRUD/Update";
 import Create from "./CRUD/Create"
 import { ItemContextProvider } from "./context/ItemContext";
-import Reviews from "./components/Reviews";
-import Footer from "./components/Footer";
-
 
 function App() {
 
@@ -27,9 +21,6 @@ function App() {
     <ItemContextProvider>
       <>
         <Navbar />
-        <Hero />
-        <Slider />
-        <Supports />
         <div className="container">
           <Routes>
             <Route path="/" element={<Home />} />

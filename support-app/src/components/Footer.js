@@ -2,7 +2,7 @@ import React from "react";
 import "./Footer.css";
 import StandLogo from "../assets/logoTransparent.png";
 import { TiSocialFacebook } from "react-icons/ti";
-import { TiSocialTumbler } from "react-icons/ti";
+
 import { TiSocialYoutube } from "react-icons/ti";
 import { TiSocialInstagram } from "react-icons/ti";
 import { TiSocialGithub } from "react-icons/ti";
