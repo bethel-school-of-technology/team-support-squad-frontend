@@ -23,6 +23,22 @@
       "image": "item3.jpg",
       "address": "987 Elmo St",
       "id": 3
+    },
+    {
+      "name": "Item 4",
+      "description": "This is Item 4, a high-quality product designed to meet your needs.",
+      "price": "15.95",
+      "image": "item4.jpg",
+      "address": "1234 Maple Ave",
+      "id": 4
+    },
+    {
+      "name": "Item 5",
+      "description": "This is Item 5, a fantastic product for your needs.",
+      "price": "24.99",
+      "image": "item5.jpg",
+      "address": "1234 Maple Ave",
+      "id": 5
     }
   ]
 }

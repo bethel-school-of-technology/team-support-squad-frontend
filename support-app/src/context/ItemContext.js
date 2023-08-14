@@ -35,6 +35,15 @@ export const ItemContextProvider = ({ children }) => {
     }
   };
 
+  const createItem = async (newItem) => {
+    try {
+      const response = await axios.post("http://localhost:3001/items", newItem);
+      setItems([...items, response.data]); 
+    } catch (error) {
+      console.error("Error creating item:", error);
+    }
+  };
+
   return (
     <ItemContext.Provider
       value={{
@@ -42,6 +51,7 @@ export const ItemContextProvider = ({ children }) => {
         getAllItems,
         getItem,
         updateItem,
+        createItem
       }}
     >
       {children}
