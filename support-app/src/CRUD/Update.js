@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useItemContext } from "../context/ItemContext";
 import { useParams } from "react-router-dom";
+import "../stylesheet/Update.css";
 
 function Update({ onCancel, onEdit }) {
   const { getItem, updateItem } = useItemContext(); // Custom hook to access context functions
@@ -50,29 +51,62 @@ function Update({ onCancel, onEdit }) {
   };
 
   return (
-    <div>
+    <div className="update-center">
+    <div className="update-container">
       <h2>Edit Item</h2>
       <form onSubmit={handleSubmit}>
-        <label>
-          Name: <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-        </label>
-        <label>
-          Description: <input type="text" value={description} onChange={(e) => setDescription(e.target.value)} />
-        </label>
-        <label>
-          Price: <input type="number" value={price} onChange={(e) => setPrice(e.target.value)} />
-        </label>
-        <label>
-          Image: <input type="text" value={image} onChange={(e) => setImage(e.target.value)} />
-        </label>
-        <label>
-          Address: <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} />
-        </label>
-        <button type="submit">Save</button>
-        <button type="button" onClick={onCancel}>Cancel</button>
+        <label className="update-label">Name:</label>
+        <input
+          className="update-input"
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+
+        <label className="update-label">Description:</label>
+        <input
+          className="update-input"
+          type="text"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+        />
+
+        <label className="update-label">Price:</label>
+        <input
+          className="update-input"
+          type="number"
+          value={price}
+          onChange={(e) => setPrice(e.target.value)}
+        />
+
+        <label className="update-label">Image:</label>
+        <input
+          className="update-input"
+          type="text"
+          value={image}
+          onChange={(e) => setImage(e.target.value)}
+        />
+
+        <label className="update-label">Address:</label>
+        <input
+          className="update-input"
+          type="text"
+          value={address}
+          onChange={(e) => setAddress(e.target.value)}
+        />
+
+        <div className="update-button-container">
+          <button className="update-button" type="submit">
+            Save
+          </button>
+          <button className="update-button cancel-button" type="button" onClick={onCancel}>
+            Cancel
+          </button>
+        </div>
       </form>
     </div>
-  );  
+    </div>
+  );
 }
 
 export default Update;
