@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Supports.css";
+import "../stylesheet/Supports.css";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import { ProductsData } from "../Data/Product1";
 
