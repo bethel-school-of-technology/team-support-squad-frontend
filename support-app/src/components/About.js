@@ -1,6 +1,7 @@
 import React from "react";
 import "../stylesheet/About.css";
 
+
 const About = () => {
   console.log("About component rendered");
   return (
