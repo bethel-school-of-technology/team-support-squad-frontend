@@ -25,7 +25,7 @@ function NavBar() {
           {/* rightSide */}
         </div>
         <ul>
-          <CustomLink to="/home">Home</CustomLink>|
+          <CustomLink to="/">Home</CustomLink>|
           <CustomLink to="/about">About Us</CustomLink>|
           <CustomLink to="/help">Help</CustomLink>
           <br></br>
