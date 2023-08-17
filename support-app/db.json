@@ -39,6 +39,14 @@
       "image": "item5.jpg",
       "address": "1234 Maple Ave",
       "id": 5
+    },
+    {
+      "name": "Item 6",
+      "description": "Description of Item 6",
+      "price": "24.99",
+      "image": "item6.jpg",
+      "address": "1234 Maple Lane",
+      "id": 6
     }
   ]
 }
