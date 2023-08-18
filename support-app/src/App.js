@@ -32,7 +32,7 @@ function App() {
             <Route path="/sign-in" element={<SignIn />} />
             <Route path="/all" element={<ItemList />} />
             <Route path="/items/:id" element={<Read />} />
-            <Route path="/create" element={<Create />} />
+            <Route path="/create" element={<Create onCancel={handleCancel} />} />
             <Route path="/update/:id" element={<Update onCancel={handleCancel} onEdit={handleEdit} />} />
             <Route path="/about" element={<About />} />
             <Route path="/help" element={<Help />} />

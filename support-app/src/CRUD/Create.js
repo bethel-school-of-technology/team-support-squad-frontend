@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { useItemContext } from "../context/ItemContext";
+import { useNavigate } from "react-router-dom";
 
-function Create({ onCancel }) {
+function Create() {
   const { createItem } = useItemContext(); // Using the createItem function from the context
+  const navigate = useNavigate();
 
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
@@ -23,11 +25,17 @@ function Create({ onCancel }) {
 
     try {
       await createItem(newItem);
-      onCancel(); 
+      navigate("/all"); // Navigate to "/all" page after creating the item
+      window.location.reload(); // Refresh the page to see the updated list
     } catch (error) {
       console.error("Error creating item:", error);
     }
   };
+
+  const handleCancel = () => {
+    navigate("/all"); // Redirect to "/all" if cancel button is clicked
+  };
+
 
   return (
     <div>
@@ -84,7 +92,7 @@ function Create({ onCancel }) {
       </label>
       <br />
       <button type="submit">Create</button>
-      <button type="button" onClick={onCancel}>
+      <button type="button" onClick={handleCancel}>
         Cancel
       </button>
     </form>

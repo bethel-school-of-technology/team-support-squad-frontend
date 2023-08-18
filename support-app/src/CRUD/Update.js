@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useItemContext } from "../context/ItemContext";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import "../stylesheet/Update.css";
 
 function Update({ onCancel, onEdit }) {
   const { getItem, updateItem } = useItemContext(); // Custom hook to access context functions
   const { id } = useParams();
+  const navigate = useNavigate();
 
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
@@ -45,6 +46,7 @@ function Update({ onCancel, onEdit }) {
     try {
       await updateItem(id, updatedItem);
       onEdit();
+      navigate(`/items/${id}`); // Redirect back to Read.js after update
     } catch (error) {
       console.error("Error updating item:", error);
     }
