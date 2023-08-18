@@ -1,0 +1,88 @@
+.left-container > img {
+  width: 550px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.splitScreen {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-container {
+  height: 200px;
+}
+
+.left-container,
+.right-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-container {
+  background: rgb(176, 214, 248);
+}
+
+.right-container {
+  color: black;
+}
+.right-container > p {
+  text-align: center;
+}
+
+.right-container form {
+  width: 330px;
+  text-align: left;
+}
+.input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
+  border: 1px solid rgb(0, 187, 255);
+  padding: 1em;
+  margin-bottom: 1.25rem;
+  font-size: 0.9rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.createBtn {
+  display: block;
+  width: 100%;
+  background: rgb(4, 133, 246);
+  color: white;
+  font-weight: 800;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.createBtn:hover {
+  background: rgb(176, 214, 248);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 900px) {
+  .splitScreen {
+    flex-direction: row;
+    height: 100vh;
+  }
+  .left-container,
+  .right-container {
+    display: flex;
+    width: 50%;
+    height: auto;
+  }
+}

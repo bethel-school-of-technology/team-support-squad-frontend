@@ -1,44 +1,33 @@
-import React, { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
-import { useItemContext } from "../context/ItemContext";
-import Delete from "./Delete"; // Import the Delete component
+import React from "react";
+import ListGroup from "react-bootstrap/ListGroup";
+import Stack from "react-bootstrap/Stack";
+import { Link, Outlet } from "react-router-dom";
+import { ItemContext } from "../context/ItemContext";
 
-function Read() {
-  const { getItem } = useItemContext();
-  const { id } = useParams();
-
-  const [item, setItem] = useState(null);
-
-  useEffect(() => {
-    getItem(id)
-      .then((itemData) => {
-        setItem(itemData);
-      })
-      .catch((error) => {
-        console.error("Error fetching item data:", error);
-      });
-  }, [getItem, id]);
-
-  if (!item) {
-    return <div>Loading...</div>;
+function Read(props) {
+  function itemList(items) {
+    if (items === null) return;
+    return items.map((items) => (
+      <ListGroup.Item key={items.id}>
+        <Link to={`/items/${items.id}`} key={items.id}>
+          {items.name}
+        </Link>
+      </ListGroup.Item>
+    ));
   }
 
   return (
-    <div>
-      <h2>{item.name}</h2>
-      <p>{item.description}</p>
-      <p>Price: ${item.price}</p>
-      <p>Image: {item.image}</p>
-      <p>Address: {item.address}</p>
-      
-      {/* Edit button linking to Update.js */}
-      <Link to={`/update/${id}`}>
-        <button>Edit</button>
-      </Link>
-      
-      {/* Render the Delete component */}
-      <Delete id={id} />
-    </div>
+    <>
+      <h1>Support Items</h1>
+      <Stack direction="horizontal" gap={3}>
+        <ListGroup className="align-self-start w-75">
+          <ItemContext.Consumer>
+            {({ items }) => itemList(items)}
+          </ItemContext.Consumer>
+        </ListGroup>
+        <Outlet />
+      </Stack>
+    </>
   );
 }
 

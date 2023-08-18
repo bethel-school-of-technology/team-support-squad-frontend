@@ -5,7 +5,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Help from "./components/Help";
 import Update from "./CRUD/Update";
-import Create from "./CRUD/Create"
+import Create from "./CRUD/Create";
 import { ItemContextProvider } from "./context/ItemContext";
 import Signup from "./components/SignUp";
 import SignIn from "./components/SignIn";
@@ -13,7 +13,6 @@ import Read from "./CRUD/Read";
 import ItemList from "./components/ItemList";
 
 function App() {
-
   const handleCancel = () => {
     console.log("Cancel button clicked");
   };
@@ -25,7 +24,7 @@ function App() {
     <ItemContextProvider>
       <>
         <Navbar />
-        <div className="container">
+        <div className="app-container">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/sign-up" element={<Signup />} />

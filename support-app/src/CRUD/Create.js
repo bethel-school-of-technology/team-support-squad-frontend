@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useItemContext } from "../context/ItemContext";
+import CreatePgImg from "../assets/upload_img_wht.png";
+import "../stylesheet/Create.css";
 import { useNavigate } from "react-router-dom";
 
 function Create() {
@@ -38,66 +40,75 @@ function Create() {
 
 
   return (
-    <div>
-    <h2>Create Item</h2>
-    <form onSubmit={handleSubmit}>
-      <label>
-        Name:{" "}
-        <input
-          type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-        />
-      </label>
-      <br />
-      <label>
-        Description:{" "}
-        <input
-          type="text"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-          required
-        />
-      </label>
-      <br />
-      <label>
-        Price:{" "}
-        <input
-          type="text"
-          value={price}
-          onChange={(e) => setPrice(e.target.value)}
-          required
-        />
-      </label>
-      <br />
-      <label>
-        Image:{" "}
-        <input
-          type="text"
-          value={image}
-          onChange={(e) => setImage(e.target.value)}
-          required
-        />
-      </label>
-      <br />
-      <label>
-        Address:{" "}
-        <input
-          type="text"
-          value={address}
-          onChange={(e) => setAddress(e.target.value)}
-          required
-        />
-      </label>
-      <br />
-      <button type="submit">Create</button>
-      <button type="button" onClick={handleCancel}>
-        Cancel
-      </button>
-    </form>
-  </div>
-  
+    <div className="splitScreen">
+      <div className="left-container">
+        <img src={CreatePgImg} alt=""></img>
+      </div>
+      <div className="right-container">
+        <div className="c-form">
+          <h2>Create a Support Listing</h2>
+          <form onSubmit={handleSubmit} className="createForm">
+            <label>
+              Name{" "}
+              <input
+                className="input"
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
+              />
+            </label>
+            <br />
+            <label>
+              Description{" "}
+              <input
+                className="input"
+                type="text"
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+                required
+              />
+            </label>
+            <br />
+            <label>
+              Price{" "}
+              <input
+                className="input"
+                type="text"
+                value={price}
+                onChange={(e) => setPrice(e.target.value)}
+                required
+              />
+            </label>
+            <br />
+            <label>
+              Image{" "}
+              <input
+                className="input"
+                type="text"
+                value={image}
+                onChange={(e) => setImage(e.target.value)}
+                required
+              />
+            </label>
+            <br />
+            <label>
+              Address{" "}
+              <input
+                className="input"
+                type="text"
+                value={address}
+                onChange={(e) => setAddress(e.target.value)}
+                required
+              />
+            </label>
+            <br />
+            <button className="createBtn" type="submit"> Create </button>
+            <button type="button" onClick={handleCancel}> Cancel </button>
+          </form>
+        </div>
+      </div>
+    </div>
   );
 }
 
