@@ -7,6 +7,10 @@ import Help from "./components/Help";
 import Update from "./CRUD/Update";
 import Create from "./CRUD/Create";
 import { ItemContextProvider } from "./context/ItemContext";
+import Signup from "./components/SignUp";
+import SignIn from "./components/SignIn";
+import Read from "./CRUD/Read";
+import ItemList from "./components/ItemList";
 
 function App() {
   const handleCancel = () => {
@@ -23,12 +27,12 @@ function App() {
         <div className="app-container">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/create" element={<Create />} />
-            <Route
-              path="/update/:id"
-              element={<Update onCancel={handleCancel} onEdit={handleEdit} />}
-            />
+            <Route path="/sign-up" element={<Signup />} />
+            <Route path="/sign-in" element={<SignIn />} />
+            <Route path="/all" element={<ItemList />} />
+            <Route path="/items/:id" element={<Read />} />
+            <Route path="/create" element={<Create onCancel={handleCancel} />} />
+            <Route path="/update/:id" element={<Update onCancel={handleCancel} onEdit={handleEdit} />} />
             <Route path="/about" element={<About />} />
             <Route path="/help" element={<Help />} />
           </Routes>

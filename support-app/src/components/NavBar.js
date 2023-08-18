@@ -25,14 +25,14 @@ function NavBar() {
           {/* rightSide */}
         </div>
         <ul>
-          <CustomLink to="/home">Home</CustomLink>|
+          <CustomLink to="/">Home</CustomLink>|
           <CustomLink to="/about">About Us</CustomLink>|
           <CustomLink to="/help">Help</CustomLink>
           <br></br>
-          <CustomLink to="/sign">
+          <CustomLink to="/sign-up">
             <div className="user">
               <FaUserCircle className="userIcon" />
-              <p>Sign in</p>
+              <p>Sign Up</p>
             </div>
           </CustomLink>
           <CustomLink to="/cart">

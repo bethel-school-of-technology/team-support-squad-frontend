@@ -44,6 +44,15 @@ export const ItemContextProvider = ({ children }) => {
     }
   };
 
+  const deleteItem = async (id) => {
+    try {
+      await axios.delete(`http://localhost:3001/items/${id}`);
+      setItems(items.filter(item => item.id !== id)); // Updates the local state after deletion
+    } catch (error) {
+      console.error("Error deleting item:", error);
+    }
+  };
+
   return (
     <ItemContext.Provider
       value={{
@@ -51,7 +60,8 @@ export const ItemContextProvider = ({ children }) => {
         getAllItems,
         getItem,
         updateItem,
-        createItem
+        createItem,
+        deleteItem 
       }}
     >
       {children}
