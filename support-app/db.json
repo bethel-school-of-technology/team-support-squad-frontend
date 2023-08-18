@@ -33,12 +33,20 @@
       "id": 4
     },
     {
-      "name": "Item 5",
-      "description": "This is Item 5, a fantastic product for your needs.",
-      "price": "24.99",
-      "image": "item5.jpg",
-      "address": "1234 Maple Ave",
-      "id": 5
+      "name": "Cappuccino",
+      "description": "Coffee",
+      "price": "5",
+      "image": "coffee.png",
+      "address": "Shop",
+      "id": 7
+    },
+    {
+      "name": "Item 18",
+      "description": "Lots",
+      "price": "59",
+      "image": "item.jpg",
+      "address": "dkufhdkghud",
+      "id": 8
     }
   ]
 }

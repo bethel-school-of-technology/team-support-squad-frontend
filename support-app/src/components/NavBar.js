@@ -29,10 +29,10 @@ function NavBar() {
           <CustomLink to="/about">About Us</CustomLink>|
           <CustomLink to="/help">Help</CustomLink>
           <br></br>
-          <CustomLink to="/sign">
+          <CustomLink to="/sign-up">
             <div className="user">
               <FaUserCircle className="userIcon" />
-              <p>Sign in</p>
+              <p>Sign Up</p>
             </div>
           </CustomLink>
           <CustomLink to="/cart">
