@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../stylesheet/Signin.css';
 
 const Signin = () => {
   const [email, setEmail] = useState('');
@@ -8,9 +9,10 @@ const Signin = () => {
   };
 
   return (
-    <div>
-      <h2>Signin</h2>
-      <label> Email: {" "}
+    <div className='signin-container'>
+      <h2>Please Sign In</h2>
+      <p>Don't have an account? <a href="/sign-up">Sign Up</a></p>
+      <label> Email {" "}
       <input
         type="email"
         value={email}
@@ -19,7 +21,7 @@ const Signin = () => {
       </label>
       <br />
       <label>
-      Password: {" "}
+      Password {" "}
       <input
         type="password"
         value={password}
