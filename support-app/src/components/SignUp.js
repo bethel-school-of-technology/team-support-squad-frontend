@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import '../stylesheet/Signup.css'; 
+
 
 const Signup = () => {
   const [email, setEmail] = useState('');
@@ -12,12 +14,13 @@ const Signup = () => {
   };
 
   return (
-    <div>
+    <div className="signup-container">
+     <p className='required-field'>*Required</p>
       <h2>Create your account</h2>
       <p>Already in Support? <a href="/sign-in">Sign in</a></p>
       <form onSubmit={handleSubmit}>
         <label>
-          Email:{" "}
+          Email {" "}
           <input
             type="text"
             value={email}
@@ -27,7 +30,7 @@ const Signup = () => {
         </label>
         <br />
         <label>
-          Password:{" "}
+          Password {" "}
           <input
             type="password"
             value={password}
@@ -37,7 +40,7 @@ const Signup = () => {
         </label>
         <br />
         <label>
-          Confirm Password:{" "}
+          Confirm Password {" "}
           <input
             type="password"
             value={confirmPassword}
@@ -47,7 +50,7 @@ const Signup = () => {
         </label>
         <br />
         <label>
-        Full Name:{" "}
+        Full Name {" "}
         <input
         type="text"
         value={fullName}
@@ -57,7 +60,7 @@ const Signup = () => {
 
         <br />
         <label>
-        Phone Number: {" "}
+        Phone Number {" "}
         <input
         type="tel"
         value={phoneNumber}
@@ -65,7 +68,7 @@ const Signup = () => {
       />
         </label>
         <br />
-        <button type="submit">Sign Up</button>
+        <button type="submit">Create Account</button>
       </form>
     </div>
   );
