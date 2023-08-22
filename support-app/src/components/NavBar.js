@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import logo from "../assets/logo.png";
 import { PiShoppingCartBold } from "react-icons/pi";
 import { FaUserCircle } from "react-icons/fa";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
+import { useUserContext } from "../context/UserContext";
 
 function NavBar() {
+  const { user, setUser } = useUserContext();
+
+  useEffect(() => {
+    const storedUser = JSON.parse(localStorage.getItem('user'));
+    if (storedUser) {
+      user && user.id !== storedUser.id && setUser(storedUser);
+    }
+  }, [user, setUser]); 
+
   return (
     <div>
       {/* leftSide */}
@@ -29,12 +39,18 @@ function NavBar() {
           <CustomLink to="/about">About Us</CustomLink>|
           <CustomLink to="/help">Help</CustomLink>
           <br></br>
-          <CustomLink to="/sign-up">
+          {user ? (
             <div className="user">
-              <FaUserCircle className="userIcon" />
-              <p>Sign Up</p>
+              <p>{user.fullName}</p>
             </div>
-          </CustomLink>
+          ) : (
+            <CustomLink to="/sign-up">
+              <div className="user">
+                <FaUserCircle className="userIcon" />
+                <p>Sign Up</p>
+              </div>
+            </CustomLink>
+          )}
           <CustomLink to="/cart">
             <PiShoppingCartBold />
           </CustomLink>

@@ -1,17 +1,30 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useUserContext } from '../context/UserContext';
 import '../stylesheet/Signup.css'; 
 
-
 const Signup = () => {
+  const navigate = useNavigate(); 
+  const { registerUser } = useUserContext();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
   const [fullName, setFullName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    try {
+      const userData = { email, password, fullName, phoneNumber };
+      const registeredUser = await registerUser(userData);
+      console.log('User registered successfully:', registeredUser);
+
+      // Redirect to the sign-in page after successful registration
+      navigate('/sign-in');
+    } catch (error) {
+      console.error('Registration error:', error);
+    }
   };
+
 
   return (
     <div className="signup-container">
@@ -40,16 +53,6 @@ const Signup = () => {
         </label>
         <br />
         <label>
-          Confirm Password {" "}
-          <input
-            type="password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            required
-          />
-        </label>
-        <br />
-        <label>
         Full Name {" "}
         <input
         type="text"
@@ -57,7 +60,6 @@ const Signup = () => {
         onChange={(e) => setFullName(e.target.value)}
       />
         </label>
-
         <br />
         <label>
         Phone Number {" "}

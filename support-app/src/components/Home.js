@@ -28,7 +28,7 @@ import { TiSocialVimeo } from "react-icons/ti";
 function Home() {
   return (
     <>
-      <div className="app-container">
+      <div className="hero">
         {/* leftSide */}
         <div className="sides">
           <span className="text1">Buy, Sell and Discover</span>
