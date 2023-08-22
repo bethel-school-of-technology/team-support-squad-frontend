@@ -12,6 +12,7 @@ import Signup from "./components/SignUp";
 import SignIn from "./components/SignIn";
 import Read from "./CRUD/Read";
 import ItemList from "./components/ItemList";
+import UserProfile from './components/UserProfile';
 
 function App() {
   const handleCancel = () => {
@@ -35,6 +36,7 @@ function App() {
               <Route path="/items/:id" element={<Read />} />
               <Route path="/create" element={<Create onCancel={handleCancel} />} />
               <Route path="/update/:id" element={<Update onCancel={handleCancel} onEdit={handleEdit} />} />
+              <Route path="/user-profile" element={<UserProfile />} />
               <Route path="/about" element={<About />} />
               <Route path="/help" element={<Help />} />
             </Routes>

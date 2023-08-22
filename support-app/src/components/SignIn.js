@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'
 import { useUserContext } from '../context/UserContext';
 import '../stylesheet/Signin.css';
 
 const Signin = () => {
+  const navigate = useNavigate();
   const { loginUser } = useUserContext();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -12,6 +14,9 @@ const Signin = () => {
       const userData = { email, password };
       const user = await loginUser(userData);
       console.log('User signed in:', user);
+
+      // Navigate to the UserProfile page
+      navigate('/user-profile');
     } catch (error) {
       console.error('Sign in error:', error);
     }
