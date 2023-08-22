@@ -10,6 +10,8 @@ export const UserContextProvider = ({ children }) => {
     try {
       const response = await axios.post('http://localhost:3001/login', userData);
       setUser(response.data.user);
+      // Store user in local storage
+      localStorage.setItem('user', JSON.stringify(response.data.user));
     } catch (error) {
       console.error('Login error:', error);
       throw new Error('Login failed');
@@ -20,17 +22,15 @@ export const UserContextProvider = ({ children }) => {
     try {
       const response = await axios.post('http://localhost:3001/users/register', userData);
       setUser(response.data.user);
-      localStorage.setItem('user', JSON.stringify(response.data.user));
     } catch (error) {
-      console.error('Login error:', error);
-      throw new Error('Login failed');
+      console.error('Registration error:', error);
+      throw new Error('Registration failed');
     }
   };
 
   const logoutUser = async () => {
     try {
-      await axios.post('http://localhost:3001/auth/logout');
-      setUser(null);
+      localStorage.removeItem("user"); // Remove the user data from local storage
     } catch (error) {
       console.error('Logout error:', error);
       throw new Error('Logout failed');
@@ -42,6 +42,7 @@ export const UserContextProvider = ({ children }) => {
       value={{
         user,
         loginUser,
+        setUser,
         registerUser,
         logoutUser
       }}
