@@ -4,7 +4,8 @@ import axios from 'axios';
 const UserContext = createContext();
 
 export const UserContextProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
+  const storedUser = JSON.parse(localStorage.getItem('user'));
+  const [user, setUser] = useState(storedUser || null);
 
   const loginUser = async (userData) => {
     try {

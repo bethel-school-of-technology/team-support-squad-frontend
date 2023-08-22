@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import logo from "../assets/logo.png";
 import { PiShoppingCartBold } from "react-icons/pi";
 import { FaUserCircle } from "react-icons/fa";
@@ -6,14 +6,7 @@ import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import { useUserContext } from "../context/UserContext";
 
 function NavBar() {
-  const { user, setUser } = useUserContext();
-
-  useEffect(() => {
-    const storedUser = JSON.parse(localStorage.getItem('user'));
-    if (storedUser) {
-      user && user.id !== storedUser.id && setUser(storedUser);
-    }
-  }, [user, setUser]); 
+  const { user, logoutUser } = useUserContext();
 
   return (
     <div>
@@ -41,7 +34,8 @@ function NavBar() {
           <br></br>
           {user ? (
             <div className="user">
-              <p>{user.fullName}</p>
+              <p>Welcome, {user.fullName}</p>
+              <button onClick={logoutUser}>Logout</button>
             </div>
           ) : (
             <CustomLink to="/sign-up">
