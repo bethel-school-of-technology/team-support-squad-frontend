@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useUserContext } from '../context/UserContext';
+import '../stylesheet/Signup.css'; 
 import {
   CDBInput,
   CDBCard,
@@ -13,16 +16,26 @@ import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import { Link } from 'react-router-dom'; 
 
 const Signup = () => {
+  const navigate = useNavigate(); 
+  const { registerUser } = useUserContext();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
   const [fullName, setFullName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
 
-  // const handleSubmit = (e) => {
-    // e.preventDefault();
-    // *Add your form submission logic here*
-  // };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const userData = { email, password, fullName, phoneNumber };
+      const registeredUser = await registerUser(userData);
+      console.log('User registered successfully:', registeredUser);
+
+      // Redirect to the sign-in page after successful registration
+      navigate('/sign-in');
+    } catch (error) {
+      console.error('Registration error:', error);
+    }
+  };
 
   return (
     <CDBContainer className="d-flex align-items-center justify-content-center min-vh-100">

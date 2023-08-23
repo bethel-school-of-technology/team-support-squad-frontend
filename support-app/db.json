@@ -48,5 +48,28 @@
       "address": "dkufhdkghud",
       "id": 8
     }
+  ],
+  "users": [
+    {
+      "email": "test@example.com",
+      "password": "$2a$10$JKhtuUOALTTVludrzxDBduVk8hT9TsaCApq33waHAwu7Wd165EwLy",
+      "fullName": "John Doe",
+      "phoneNumber": "1234567890",
+      "id": 1
+    },
+    {
+      "email": "test2@example.com",
+      "password": "$2a$10$WyyI0zXgpMio8BF76Tu8s.eKc8SThYTLDf708XvjfwnT50TOUZ.zW",
+      "fullName": "John Two",
+      "phoneNumber": "1234567890",
+      "id": 2
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$MdoNy8.0GL/M5KYsMDF2POvS1/6FT5/6QCVb1aMeqBaT3X0ydhs2e",
+      "fullName": "admin",
+      "phoneNumber": "12345",
+      "id": 3
+    }
   ]
 }
