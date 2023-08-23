@@ -47,12 +47,9 @@ const Signup = () => {
           <CDBInput label="Email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
           <p className="text-muted text-center small mt-n4">At least 8 characters and 1 digit</p>
           <CDBInput label="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-          <CDBInput label="ConfirmPassword" type="confirmpassword" value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} />
           <CDBInput label="Full Name" type="text" value={fullName} onChange={(e) => setFullName(e.target.value)} />
           <CDBInput label="Phone Number" type="tel" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
-          <CDBBtn color="dark" outline className="btn-block my-3 mx-0">
-            Sign up
-          </CDBBtn>
+          <CDBBtn color="dark" outline className="btn-block my-3 mx-0" onClick={handleSubmit}> Sign up </CDBBtn>
           <p className="text-center"> or sign up with</p>
           <div className="flex-row mb-3 d-flex justify-content-center">
             <CDBBtn color="black" className="m-0" outline>

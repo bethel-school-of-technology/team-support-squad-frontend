@@ -70,6 +70,13 @@
       "fullName": "admin",
       "phoneNumber": "12345",
       "id": 3
+    },
+    {
+      "email": "New@gmail.com",
+      "password": "$2a$10$uwMBkan.SyO1JH.BkvwuUeYH.y0K/bv6.CAnqBBQgCHOqdMB6H7VC",
+      "fullName": "New User",
+      "phoneNumber": "123456",
+      "id": 4
     }
   ]
 }
