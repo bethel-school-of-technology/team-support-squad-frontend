@@ -1,27 +1,12 @@
 {
   "items": [
     {
-      "id": 1,
-      "name": "Item 1",
-      "description": "Description of Item 1",
-      "price": 10.99,
-      "image": "item1.jpg",
-      "address": "123 Main St"
-    },
-    {
-      "id": 2,
-      "name": "Item 2",
-      "description": "New Description of Item 2",
-      "price": 17.99,
-      "image": "item2.jpg",
-      "address": "46 Elm St"
-    },
-    {
       "name": "Item 3",
       "description": "Description of Item 3",
       "price": "12.99",
       "image": "item3.jpg",
       "address": "987 Elmo St",
+      "user_id": 3,
       "id": 3
     },
     {
@@ -30,6 +15,7 @@
       "price": "15.95",
       "image": "item4.jpg",
       "address": "1234 Maple Ave",
+      "user_id": 4,
       "id": 4
     },
     {
@@ -38,6 +24,7 @@
       "price": "5",
       "image": "coffee.png",
       "address": "Shop",
+      "user_id": 1,
       "id": 7
     },
     {
@@ -46,7 +33,17 @@
       "price": "59",
       "image": "item.jpg",
       "address": "dkufhdkghud",
+      "user_id": 2,
       "id": 8
+    },
+    {
+      "name": "Banana",
+      "description": "Yellow",
+      "price": "7",
+      "image": "image.jpg",
+      "address": "Some place",
+      "user_id": 2,
+      "id": 9
     }
   ],
   "users": [
