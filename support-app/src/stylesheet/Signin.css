@@ -1,4 +1,14 @@
-.signin-container {
+.form-container {
+  background-color: #a390de;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/* .signin-container {
     max-width: 350px;
     margin: 0 auto;
     padding: 20px;
@@ -33,5 +43,5 @@
     padding: 10px 20px;
     border-radius: 3px;
     cursor: pointer;
-  }
+  } */
   
