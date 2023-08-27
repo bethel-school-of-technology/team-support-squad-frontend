@@ -1,7 +1,6 @@
 {
   "items": [
     {
-<<<<<<< HEAD
       "id": 1,
       "name": "Apple Watch Gen 4",
       "description": "Description of Item 1",
@@ -20,34 +19,22 @@
       "type": "home"
     },
     {
-=======
->>>>>>> ad756173f8b241657be4209b69cdb3a02811938d
       "name": "Item 3",
       "description": "Description of Item 3",
       "price": "12.99",
       "image": "item3.jpg",
       "address": "987 Elmo St",
-<<<<<<< HEAD
-      "id": 3,
-      "type": "fashion"
-=======
       "user_id": 3,
       "id": 3
->>>>>>> ad756173f8b241657be4209b69cdb3a02811938d
     },
     {
       "name": "Item 4",
       "description": "This is Item 4, a high-quality product designed to meet your needs.",
       "price": "15.95",
       "image": "item4.jpg",
-      "address": "1234 Maple Ave",
-<<<<<<< HEAD
+
       "id": 4,
-      "type": "tools"
-=======
-      "user_id": 4,
-      "id": 4
->>>>>>> ad756173f8b241657be4209b69cdb3a02811938d
+      "user_id": 4
     },
     {
       "name": "Cappuccino",

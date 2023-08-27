@@ -86,7 +86,7 @@ function Home() {
                   <span>{slide.detail}</span>
                 </div>
                 <span>${slide.price}</span>
-                <div>Support now</div>
+                <div onClick="./ItemList.js">Support now</div>
               </div>
               <img src={slide.img} alt="supports" className="img-support" />
             </SwiperSlide>
