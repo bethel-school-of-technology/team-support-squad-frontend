@@ -1,5 +1,12 @@
 import React from "react";
-import "../stylesheet/About.css";
+// import "../stylesheet/About.css";
+// import jsIcon from "../assets/caliFlag.png";
+// import skIcon from "../assets/indiaFlag.png";
+// import rcIcon from "../assets/txFlag.png";
+
+// import { FaTwitter } from "react-icons/fa";
+// import { FaFacebook } from "react-icons/fa";
+// import { FaLinkedin } from "react-icons/fa";
 
 const About = () => {
   console.log("About component rendered");

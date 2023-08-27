@@ -69,7 +69,8 @@ body {
 }
 
 .search {
-  margin-top: 5px;
+  margin-top: 2px;
+  border-radius: 10px;
 }
 .searchform input,
 .searchform button {
@@ -124,6 +125,10 @@ body {
   color: white;
   height: 33px;
   /* outline: 1px solid black; */
+}
+
+.user > :nth-child(2) {
+  margin-top: 14px;
 }
 
 .userIcon {
