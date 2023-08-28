@@ -1,5 +1,9 @@
-.left-container > img {
+.leftCreate-container > img {
   width: 550px;
+}
+
+.createForm {
+  margin-top: 30px;
 }
 
 h2 {
@@ -12,35 +16,35 @@ h2 {
   flex-direction: row;
 }
 
-.left-container {
+.leftCreate-container {
   height: 200px;
 }
 
-.left-container,
-.right-container {
+.leftCreate-container,
+.rightCreate-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.left-container {
+.leftCreate-container {
   background: rgb(202, 218, 250);
 }
 
-.right-container {
+.rightCreate-container {
   color: black;
 }
-.right-container > p {
+.rightCreate-container > p {
   text-align: center;
 }
 
-.right-container form {
-  width: 330px;
+.rightCreate-container form {
+  width: 360px;
   text-align: left;
 }
 .input {
   display: block;
-  width: 100%;
+  width: 360px;
   box-sizing: border-box;
   border-radius: 8px;
   border: 1px solid rgb(202, 218, 250);
@@ -79,10 +83,14 @@ label {
     flex-direction: row;
     height: 100vh;
   }
-  .left-container,
-  .right-container {
+  .leftCreate-container,
+  .rightCreate-container {
     display: flex;
     width: 50%;
     height: auto;
   }
+}
+
+.cancel {
+  margin-top: 30px;
 }

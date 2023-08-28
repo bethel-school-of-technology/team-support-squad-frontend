@@ -1,36 +1,40 @@
 import React, { useState, useEffect } from "react";
 import { useItemContext } from "../context/ItemContext";
 import { useParams, useNavigate } from "react-router-dom";
+import { useUserContext } from "../context/UserContext";
 import "../stylesheet/Update.css";
 
 function Update({ onCancel, onEdit }) {
+  const { user } = useUserContext();
   const { getItem, updateItem } = useItemContext(); // Custom hook to access context functions
   const { id } = useParams();
   const navigate = useNavigate();
-
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [price, setPrice] = useState("");
   const [image, setImage] = useState("");
   const [address, setAddress] = useState("");
 
-  useEffect(() => {
-    console.log(id);
-
-    // Fetching item data based on id
-    getItem(id)
-      .then((itemData) => {
-        const { name, description, price, image, address } = itemData;
-        setName(name);
-        setDescription(description);
-        setPrice(price);
-        setImage(image);
-        setAddress(address);
-      })
-      .catch((error) => {
-        console.error("Error fetching item data:", error);
-      });
-  }, [getItem, id]);
+    useEffect(() => {
+    console.log(id);      
+      getItem(id)
+        .then((itemData) => {
+          const { name, description, price, image, address, user_id } = itemData;
+          if (user_id !== user.id) {
+            alert('You are not the owner');
+            navigate("/all"); // Redirect to /all
+          } else {
+            setName(name);
+            setDescription(description);
+            setPrice(price);
+            setImage(image);
+            setAddress(address);
+          }
+        })
+        .catch((error) => {
+          console.error("Error fetching item data:", error);
+        });
+    }, [getItem, id, user, navigate]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

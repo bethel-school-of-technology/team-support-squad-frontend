@@ -1,0 +1,25 @@
+.items-container {
+  margin-top: 10px;
+  padding: 0 2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.items-container > :nth-child(1) {
+  padding-top: 70px;
+  position: absolute;
+  width: 60rem;
+  left: 29%;
+  top: -3rem;
+}
+
+.items-data {
+  padding-top: 120px;
+  display: grid;
+  width: 90%;
+  grid-template-columns: 25% auto;
+}

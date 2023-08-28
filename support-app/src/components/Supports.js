@@ -34,7 +34,10 @@ const Supports = () => {
                   <span>{product.detail}</span>
                 </div>
                 <span>${product.price}</span>
-                <div>Support Now!</div>
+                <div>
+                  {" "}
+                  <a href="../all"> Support now</a>
+                </div>
               </div>
               <img src={product.img} alt="img" className="sImg" />
             </div>
