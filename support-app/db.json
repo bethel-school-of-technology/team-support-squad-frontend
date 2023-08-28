@@ -2,12 +2,12 @@
   "items": [
     {
       "id": 1,
-      "name": "Apple Watch Gen 4",
+      "name": "Apple Watch Gen 3",
       "description": "Description of Item 1",
-      "price": 10.99,
+      "price": 10.89,
       "image": "item1.jpg",
       "address": "123 Main St",
-      "type": "fashion"
+      "icon": "./public/images/1.png"
     },
     {
       "id": 2,

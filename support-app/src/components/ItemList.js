@@ -31,6 +31,9 @@ const ItemList = () => {
           <div key={item.id}>
             <Link to={`/items/${item.id}`}>
               <div className="items-data"></div>
+              <span>
+                <img src={item.icon} alt=""></img>{" "}
+              </span>
               <span>{item.name}</span>
               <span>{item.description}</span>
               <span>{item.price}</span>
