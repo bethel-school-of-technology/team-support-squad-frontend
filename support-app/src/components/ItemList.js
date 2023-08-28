@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useItemContext } from "../context/ItemContext";
+import "../stylesheet/ItemList.css";
 
 const ItemList = () => {
   const { items, getAllItems } = useItemContext();
@@ -11,15 +12,35 @@ const ItemList = () => {
     }
   }, [getAllItems, items.length]);
 
+  // const filter = (type) => {
+  //   getAllItems(useItemContext.filter((items) => items.type === type));
+  // };
+
   return (
-    <div>
-      {items.map((item) => (
-        <div key={item.id}>
-          <Link to={`/items/${item.id}`}>
-            <h3>{item.name}</h3>
-          </Link>
-        </div>
-      ))}
+    <div className="items-container">
+      {/* <ul className="menu">
+        <li onClick={() => getAllItems(useItemContext)}>All</li>
+        <li onClick={() => filter("auto")}>Auto</li>
+        <li onClick={() => filter("electronics")}>Electronics</li>
+        <li onClick={() => filter("fashion")}>Fashion</li>
+        <li onClick={() => filter("home")}>Home</li>
+        <li onClick={() => filter("tools")}>Tools</li>
+      </ul> */}
+      <div className="items-list">
+        {items.map((item) => (
+          <div key={item.id}>
+            <Link to={`/items/${item.id}`}>
+              <div className="items-data"></div>
+              <span>
+                <img src={item.icon} alt=""></img>{" "}
+              </span>
+              <span>{item.name}</span>
+              <span>{item.description}</span>
+              <span>{item.price}</span>
+            </Link>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

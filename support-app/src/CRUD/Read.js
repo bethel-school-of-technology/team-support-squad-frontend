@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { useItemContext } from "../context/ItemContext";
+import { useUserContext } from "../context/UserContext";
 import Delete from "./Delete"; // Import the Delete component
 
 function Read() {
+  const { user } = useUserContext();
   const { getItem } = useItemContext();
   const { id } = useParams();
 
@@ -23,6 +25,8 @@ function Read() {
     return <div>Loading...</div>;
   }
 
+  const isOwner = user && item.user_id === user.id;
+
   return (
     <div>
       <h2>{item.name}</h2>
@@ -31,13 +35,16 @@ function Read() {
       <p>Image: {item.image}</p>
       <p>Address: {item.address}</p>
       
-      {/* Edit button linking to Update.js */}
-      <Link to={`/update/${id}`}>
-        <button>Edit</button>
-      </Link>
-      
-      {/* Render the Delete component */}
-      <Delete id={id} />
+      {/* Conditionally render the Edit button */}
+      {isOwner && 
+      ( 
+        <Link to={`/update/${id}`}>
+          <button>Edit</button>
+        </Link>
+      )}
+
+      {/* Conditionally render the Delete component */}
+      {isOwner && <Delete id={id} />}
     </div>
   );
 }

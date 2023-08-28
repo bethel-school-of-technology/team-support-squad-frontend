@@ -29,7 +29,7 @@ export const ItemContextProvider = ({ children }) => {
 
   const updateItem = async (id, updatedItem) => {
     try {
-      await axios.put(`http://localhost:3001/items/${id}`, updatedItem);
+      await axios.patch(`http://localhost:3001/items/${id}`, updatedItem);
     } catch (error) {
       console.error("Error updating item:", error);
     }
@@ -37,7 +37,9 @@ export const ItemContextProvider = ({ children }) => {
 
   const createItem = async (newItem) => {
     try {
-      const response = await axios.post("http://localhost:3001/items", newItem);
+      const user = JSON.parse(localStorage.getItem('user'));
+      console.log(user);
+      const response = await axios.post("http://localhost:3001/items", {...newItem, 'user_id': user.id});
       setItems([...items, response.data]); 
     } catch (error) {
       console.error("Error creating item:", error);
@@ -53,6 +55,15 @@ export const ItemContextProvider = ({ children }) => {
     }
   };
 
+  const getItemsByUserId = async (userId) => {
+    try {
+      const response = await axios.get(`http://localhost:3001/items/user/${userId}`);
+      return response.data;
+    } catch (error) {
+      console.error("Error fetching user's items:", error);
+    }
+  };
+
   return (
     <ItemContext.Provider
       value={{
@@ -61,7 +72,8 @@ export const ItemContextProvider = ({ children }) => {
         getItem,
         updateItem,
         createItem,
-        deleteItem 
+        deleteItem,
+        getItemsByUserId
       }}
     >
       {children}

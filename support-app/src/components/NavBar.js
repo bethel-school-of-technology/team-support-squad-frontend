@@ -33,10 +33,12 @@ function NavBar() {
           <CustomLink to="/help">Help</CustomLink>
           <br></br>
           {user ? (
-            <><Link to="/user-profile" className="user">
-            <p>Welcome, {user.fullName}</p>
-          </Link>
-            <button onClick={logoutUser}>Logout</button></>
+            <>
+              <Link to="/user-profile" className="user">
+                <p>Welcome, {user.fullName}</p>
+              </Link>
+              <button onClick={logoutUser}>Logout</button>
+            </>
           ) : (
             <CustomLink to="/sign-up">
               <div className="user">

@@ -32,6 +32,7 @@ export const UserContextProvider = ({ children }) => {
   const logoutUser = async () => {
     try {
       localStorage.removeItem("user"); // Remove the user data from local storage
+      window.location.reload(); // Reload the page
     } catch (error) {
       console.error('Logout error:', error);
       throw new Error('Logout failed');
