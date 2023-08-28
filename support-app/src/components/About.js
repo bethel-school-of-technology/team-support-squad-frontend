@@ -122,23 +122,6 @@ function About() {
   );
 }
 
-  <div className="column">
-    <div className="card">
-      <img src="" alt="" style={{ width:"100%" }}/>
-      <div className="container">
-        <h2>Sonal Kheware</h2>
-        <p className="title">Full Stack Developer</p>
-        <p>Some text that describes me.</p>
-        <p><a href="mailto:sonalkhevare1997@gmail.com" className="button">Contact</a></p>
-      </div>
-    </div>
-  </div>
-  </div>
-  <div>
-  </div>
-    </>
-  );
-}
 export default About;
 
 
