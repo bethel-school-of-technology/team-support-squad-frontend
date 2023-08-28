@@ -45,7 +45,9 @@ function Home() {
           <div className="cart2">
             <CgShoppingBag />
             <div className="signup">
-              <span>Signup Now!</span>
+              <span>
+                <a href="../sign-up"> Signup Now!</a>
+              </span>
               <div>
                 <BiRightArrow />
               </div>
@@ -86,7 +88,9 @@ function Home() {
                   <span>{slide.detail}</span>
                 </div>
                 <span>${slide.price}</span>
-                <div>Support now</div>
+                <div>
+                  <a href="../all"> Support now</a>
+                </div>
               </div>
               <img src={slide.img} alt="supports" className="img-support" />
             </SwiperSlide>

@@ -1,6 +1,24 @@
 {
   "items": [
     {
+      "id": 1,
+      "name": "Apple Watch Gen 3",
+      "description": "Description of Item 1",
+      "price": 10.89,
+      "image": "item1.jpg",
+      "address": "123 Main St",
+      "icon": "./public/images/1.png"
+    },
+    {
+      "id": 2,
+      "name": "Item 2",
+      "description": "New Description of Item 2",
+      "price": 17.99,
+      "image": "item2.jpg",
+      "address": "46 Elm St",
+      "type": "home"
+    },
+    {
       "name": "Item 3",
       "description": "Description of Item 3",
       "price": "12.99",

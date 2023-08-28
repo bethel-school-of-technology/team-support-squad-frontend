@@ -38,13 +38,12 @@ function Create() {
     navigate("/all"); // Redirect to "/all" if cancel button is clicked
   };
 
-
   return (
     <div className="splitScreen">
-      <div className="left-container">
+      <div className="leftCreate-container">
         <img src={CreatePgImg} alt=""></img>
       </div>
-      <div className="right-container">
+      <div className="rightCreate-container">
         <div className="c-form">
           <h2>Create a Support Listing</h2>
           <form onSubmit={handleSubmit} className="createForm">
@@ -103,8 +102,14 @@ function Create() {
               />
             </label>
             <br />
-            <button className="createBtn" type="submit"> Create </button>
-            <button type="button" onClick={handleCancel}> Cancel </button>
+            <button className="createBtn" type="submit">
+              {" "}
+              Create{" "}
+            </button>
+            <button type="button" onClick={handleCancel} className="cancel">
+              {" "}
+              Cancel{" "}
+            </button>
           </form>
         </div>
       </div>
