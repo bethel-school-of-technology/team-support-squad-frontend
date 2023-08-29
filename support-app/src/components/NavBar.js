@@ -3,8 +3,11 @@ import logo from "../assets/logo.png";
 import { PiShoppingCartBold } from "react-icons/pi";
 import { FaUserCircle } from "react-icons/fa";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
+import { useUserContext } from "../context/UserContext";
 
 function NavBar() {
+  const { user, logoutUser } = useUserContext();
+
   return (
     <div>
       {/* leftSide */}
@@ -29,12 +32,21 @@ function NavBar() {
           <CustomLink to="/about">About Us</CustomLink>|
           <CustomLink to="/help">Help</CustomLink>
           <br></br>
-          <CustomLink to="/sign-up">
-            <div className="user">
-              <FaUserCircle className="userIcon" />
-              <p>Sign Up</p>
-            </div>
-          </CustomLink>
+          {user ? (
+            <>
+              <Link to="/user-profile" className="user">
+                <p>Welcome, {user.fullName}</p>
+              </Link>
+              <button onClick={logoutUser}>Logout</button>
+            </>
+          ) : (
+            <CustomLink to="/sign-up">
+              <div className="user">
+                <FaUserCircle className="userIcon" />
+                <p>Sign Up</p>
+              </div>
+            </CustomLink>
+          )}
           <CustomLink to="/cart">
             <PiShoppingCartBold />
           </CustomLink>
