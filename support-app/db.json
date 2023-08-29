@@ -32,9 +32,9 @@
       "description": "This is Item 4, a high-quality product designed to meet your needs.",
       "price": "15.95",
       "image": "item4.jpg",
-
-      "id": 4,
-      "user_id": 4
+      "address": "1234 Maple Ave",
+      "user_id": 4,
+      "id": 4
     },
     {
       "name": "Cappuccino",
