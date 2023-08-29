@@ -34,10 +34,12 @@ function NavBar() {
           <br></br>
           {user ? (
             <>
-              <Link to="/user-profile" className="user">
-                <p>Welcome, {user.fullName}</p>
+              <Link to="/user-profile">
+                <p className="welcome-user">Welcome, {user.fullName}</p>
               </Link>
-              <button onClick={logoutUser}>Logout</button>
+              <button onClick={logoutUser} class="btn btn-primary">
+                Logout
+              </button>
             </>
           ) : (
             <CustomLink to="/sign-up">
