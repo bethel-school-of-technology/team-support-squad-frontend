@@ -1,7 +1,10 @@
 import React from "react";
+import "../stylesheet/Help.css"
+import Map from "../components/Map";
 
 function Help() {
   return (
+    <>
     <div>
       <h1>Help Center</h1>
       <p>Welcome to the Help Center for our Offer App. We provide a platform for users to buy and sell their products easily.</p>
@@ -13,7 +16,13 @@ function Help() {
   <p>If you can't find the information you're looking for, or if you need further assistance, our support team is here to help.</p>
   <p>Contact our support team at support@mail.com or call us at +1-800-123-4567.</p>
   <p>We are available during our business hours, Monday to Friday, 9 AM - 6 PM.</p>
+
+  <h2>Seller Location</h2>
+  <div>
+    <Map />
   </div>
+  </div>
+ </>
   );
 }
 
