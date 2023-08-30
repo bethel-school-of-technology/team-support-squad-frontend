@@ -6,13 +6,19 @@ const containerStyle = {
   height: '400px',
 };
 
-const Map = ({ location }) => {
-  const center = { lat: location.lat, lng: location.lng };
+// const Map = ({ location }) => {
+//   const center = { lat: location.lat, lng: location.lng };
 
+const NewYorkCoordinates = {
+  lat: 40.7128,
+  lng: -74.0060,
+};
+  
+const Map = () => {
   return (
     <LoadScript googleMapsApiKey="AIzaSyBU0ZdYhzfCYD0SJGYK72kDdw8xXFI2RK8">
-      <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10}>
-        <Marker position={center} />
+      <GoogleMap mapContainerStyle={containerStyle} center={NewYorkCoordinates} zoom={10}>
+        <Marker position={NewYorkCoordinates} />
       </GoogleMap>
     </LoadScript>
   );
