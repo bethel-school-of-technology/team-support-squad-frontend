@@ -50,7 +50,7 @@
       "description": "Lots",
       "price": "59",
       "image": "item.jpg",
-      "address": "dkufhdkghud",
+      "address": "1600 Pennsylvania Ave NW, Washington, DC 20006",
       "user_id": 2,
       "id": 8
     },
@@ -59,7 +59,7 @@
       "description": "Yellow",
       "price": "7",
       "image": "image.jpg",
-      "address": "Some place",
+      "address": "Piazza del Duomo - 56126 Pisa (PI)",
       "user_id": 2,
       "id": 9
     }
