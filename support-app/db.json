@@ -5,13 +5,13 @@
       "name": "Apple Watch Gen 3",
       "description": "Description of Item 1",
       "price": 10.89,
-      "image": "item1.jpg",
       "address": "123 Main St",
-      "icon": "./public/images/1.png"
+      "icon": "/images/1.png",
+      "type": "Fashion"
     },
     {
       "id": 2,
-      "name": "Item 2",
+      "name": "new data",
       "description": "New Description of Item 2",
       "price": 17.99,
       "image": "item2.jpg",

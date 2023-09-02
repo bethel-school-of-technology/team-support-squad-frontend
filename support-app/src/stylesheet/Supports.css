@@ -1,4 +1,4 @@
-.supContainer {
+/* .supContainer {
   margin-top: 10px;
   padding: 0 2rem;
   position: relative;
@@ -8,57 +8,65 @@
   align-items: center;
   justify-content: center;
   background: rgb(202, 218, 250);
-}
-
+} */
+/* 
 .supContainer > :nth-child(1) {
   padding-top: 70px;
   position: absolute;
   width: 60rem;
   left: 29%;
   top: -3rem;
-}
+} */
 
-.items {
+/* .items {
   padding-top: 120px;
   display: grid;
   width: 90%;
   grid-template-columns: 25% auto;
-}
+} */
 
-.menu {
+/* .menu {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   font-weight: 500;
   font-size: 1.3rem;
-}
-
+} */
+/* 
 .menu > li:hover {
   color: white;
   cursor: pointer;
-}
+} */
 
-.list {
+/* .list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  height: 25rem;
+  height: 80rem;
   overflow-y: scroll;
-  grid-gap: 2rem;
+  grid-gap: 3rem;
   justify-content: space-between;
   margin-bottom: 40px;
-}
+} */
 
+.supContainer {
+  display: flex;
+  flex-direction: row;
+}
 .supports {
   width: 20rem;
-  height: 12rem;
-  background-color: white;
-  position: relative;
-  overflow: hidden;
+  height: 20rem;
+  background-color: gray;
+  /* position: relative;
+  overflow: hidden; */
   padding: 1.5rem;
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  align-items: center; */
   border-radius: 1rem;
+
+  margin-left: 20rem;
+  margin-top: 2rem;
+  z-index: -2;
 }
 .supports > img {
   width: 6rem;
