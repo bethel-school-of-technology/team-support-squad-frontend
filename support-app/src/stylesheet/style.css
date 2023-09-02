@@ -169,3 +169,11 @@ body {
 li {
   list-style-type: none;
 }
+
+.welcome-user {
+  margin-top: 18px;
+  padding: 8px 8px 8px 8px;
+  border-radius: 10px;
+  border: 1px solid rgb(6, 126, 255);
+  color: #0671b8;
+}

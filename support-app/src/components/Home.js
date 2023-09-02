@@ -11,7 +11,6 @@ import "../stylesheet/Slider.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import Supports from "./Supports";
 
 import "../stylesheet/Reviews.css";
 import ReviewImg from "../assets/review.png";
@@ -97,9 +96,8 @@ function Home() {
           ))}
         </Swiper>
       </div>
-
-      {/* supports section */}
-      <Supports />
+      {/* supports section
+      <Supports /> */}
       {/* reviews section */}
       <div className="reviews">
         <div className="r-wrapper">
@@ -139,7 +137,6 @@ function Home() {
           </Swiper>
         </div>
       </div>
-
       {/* footer */}
       <div className="footerWrapper">
         <hr />
