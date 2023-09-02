@@ -7,6 +7,8 @@ import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api"; // Impor
 import fetchCoordinates from "../components/ItemCoords";
 import "../stylesheet/Read.css";
 
+import { GrFormEdit } from "react-icons/gr";
+
 function Read() {
   const { user } = useUserContext();
   const { getItem } = useItemContext();
@@ -78,16 +80,13 @@ function Read() {
                 </GoogleMap>
               </LoadScript>
             </div>
-
-            {/* Conditionally render the Edit button */}
-            {isOwner && (
+            <div className="edit-del-container">
               <Link to={`/update/${id}`}>
-                <button>Edit</button>
+                <GrFormEdit className="edit-div" />
               </Link>
-            )}
 
-            {/* Conditionally render the Delete component */}
-            {isOwner && <Delete id={id} />}
+              <div className="delete-div">{isOwner && <Delete id={id} />}</div>
+            </div>
           </div>
         </div>
       </div>
