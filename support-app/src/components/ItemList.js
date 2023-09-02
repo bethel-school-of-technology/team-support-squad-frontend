@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
 import { useItemContext } from "../context/ItemContext";
 import "../stylesheet/ItemList.css";
 import Supports from "./Supports";
@@ -14,24 +13,9 @@ const ItemList = () => {
   }, [getAllItems, items.length]);
 
   return (
-    <div className="items-container">
+    <>
       <Supports />
-      {/* <div className="items-list">
-        {items.map((item) => (
-          <div key={item.id}>
-            <Link to={`/items/${item.id}`}>
-              <div className="items-data"></div>
-              <span>
-                <img src={item.icon} alt=""></img>{" "}
-              </span>
-              <span>{item.name}test</span>
-              <span>{item.description}</span>
-              <span>{item.price}</span>
-            </Link>
-          </div>
-        ))}
-      </div> */}
-    </div>
+    </>
   );
 };
 

@@ -14,29 +14,19 @@ const Supports = () => {
 
   return (
     <div className="supContainer">
-      <div className="items">
-        <div className="list">
-          {items.map((item) => (
-            <div key={item.id}>
-              <Link to={`/items/${item.id}`}>
-                <div className="supports">
-                  <div className="left-s">
-                    <div className="name">
-                      <span>{item.name}</span>
-                    </div>
-                    <span>${item.price}</span>
-                    <div>
-                      {" "}
-                      <Link to={`/items/${item.id}`} />
-                    </div>
-                  </div>
-                  <img src={item.icon} alt="img" className="sImg" />
-                </div>
-              </Link>
+      {items.map((item) => (
+        <Link to={`/items/${item.id}`} className="itemLink" key={item.id}>
+          <div className="supports animated-supports">
+            <div className="left-s">
+              <div className="name">
+                <span>{item.name}</span>
+              </div>
+              <span>${item.price}</span>
             </div>
-          ))}
-        </div>
-      </div>
+            <img src={item.icon} alt="img" className="sImg" />
+          </div>
+        </Link>
+      ))}
     </div>
   );
 };
