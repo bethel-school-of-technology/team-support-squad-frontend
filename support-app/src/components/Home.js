@@ -38,12 +38,12 @@ function Home() {
         </div>
         {/* middle */}
 
-        <div className="wrapper">
+        <div className="home-wrapper">
           <div className="bg"></div>
           <img src={HeroImg} alt="" width={600} />
           <div className="cart2">
             <CgShoppingBag />
-            <div className="signup">
+            <div className="home-signUp">
               <span>
                 <a href="../sign-up"> Signup Now!</a>
               </span>

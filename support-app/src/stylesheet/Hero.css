@@ -5,13 +5,13 @@
   background-color: rgb(202, 218, 250);
 }
 
-.wrapper {
+.home-wrapper {
   display: flex;
   align-items: baseline;
   justify-content: center;
   position: relative;
 }
-.wrapper > img {
+.home-wrapper > img {
   width: 38rem;
   bottom: 2;
   /* position: absolute; */
@@ -48,7 +48,7 @@
   border: 3px solid rgb(12, 127, 241);
 }
 
-.signup {
+.home-signUp {
   display: flex;
   gap: 0.1rem;
   align-items: center;
@@ -59,12 +59,12 @@
   box-shadow: 2px 3px 6px 1px rgb(66, 64, 64);
 }
 
-.signup > :first-child {
+.home-signUp > :first-child {
   display: block;
   width: 6rem;
 }
 
-.signup > :nth-child(2) {
+.home-signUp > :nth-child(2) {
   border-radius: 50%;
   border: 1px solid rgb(0, 106, 255);
   display: flex;

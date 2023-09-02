@@ -1,10 +1,7 @@
 import React from "react";
+import "../stylesheet/Mockup.css";
 
 function MockUp() {
-  return (
-    <div>
-      <p>test</p>
-    </div>
-  );
+  return <div className="example"></div>;
 }
 export default MockUp;
