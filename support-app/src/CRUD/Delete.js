@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useItemContext } from "../context/ItemContext";
 import { useNavigate } from "react-router-dom";
+import { MdDeleteOutline } from "react-icons/md";
 
 function Delete({ id }) {
   const { getItem, deleteItem } = useItemContext();
@@ -30,8 +31,7 @@ function Delete({ id }) {
 
   return (
     <div>
-      <h2>Delete Item</h2>
-      <button onClick={handleDelete}>Delete</button>
+      <MdDeleteOutline onClick={handleDelete} />
     </div>
   );
 }
