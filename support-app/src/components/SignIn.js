@@ -1,15 +1,29 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'
+import { useUserContext } from '../context/UserContext';
 import { CDBInput, CDBCard, CDBCardBody, CDBIcon, CDBBtn, CDBLink, CDBContainer } from 'cdbreact';
 import '../stylesheet/Signin.css';
 import { Link } from 'react-router-dom';
 
 const Signin = () => {
+  const navigate = useNavigate();
+  const { loginUser } = useUserContext();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSignin = () => {
-  };
+  const handleSignin = async () => {
+    try {
+      const userData = { email, password };
+      const user = await loginUser(userData);
+      console.log('User signed in:', user);
 
+      // Navigate to the UserProfile page
+      navigate('/user-profile');
+    } catch (error) {
+      console.error('Sign in error:', error);
+    }
+  };
+  
   return (
     <CDBContainer className="d-flex align-items-center justify-content-center min-vh-100">
       <CDBCard style={{ width: '25rem' }} className="form-container">

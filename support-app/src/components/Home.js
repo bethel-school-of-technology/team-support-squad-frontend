@@ -11,7 +11,6 @@ import "../stylesheet/Slider.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import Supports from "./Supports";
 
 import "../stylesheet/Reviews.css";
 import ReviewImg from "../assets/review.png";
@@ -28,7 +27,7 @@ import { TiSocialVimeo } from "react-icons/ti";
 function Home() {
   return (
     <>
-      <div className="app-container">
+      <div className="hero">
         {/* leftSide */}
         <div className="sides">
           <span className="text1">Buy, Sell and Discover</span>
@@ -39,13 +38,15 @@ function Home() {
         </div>
         {/* middle */}
 
-        <div className="wrapper">
+        <div className="home-wrapper">
           <div className="bg"></div>
           <img src={HeroImg} alt="" width={600} />
           <div className="cart2">
             <CgShoppingBag />
-            <div className="signup">
-              <span>Signup Now!</span>
+            <div className="home-signUp">
+              <span>
+                <a href="../sign-up"> Signup Now!</a>
+              </span>
               <div>
                 <BiRightArrow />
               </div>
@@ -86,16 +87,17 @@ function Home() {
                   <span>{slide.detail}</span>
                 </div>
                 <span>${slide.price}</span>
-                <div>Support now</div>
+                <div>
+                  <a href="../all"> Support now</a>
+                </div>
               </div>
               <img src={slide.img} alt="supports" className="img-support" />
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
-
-      {/* supports section */}
-      <Supports />
+      {/* supports section
+      <Supports /> */}
       {/* reviews section */}
       <div className="reviews">
         <div className="r-wrapper">
@@ -135,7 +137,6 @@ function Home() {
           </Swiper>
         </div>
       </div>
-
       {/* footer */}
       <div className="footerWrapper">
         <hr />

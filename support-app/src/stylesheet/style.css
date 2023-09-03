@@ -8,6 +8,11 @@
   flex-direction: column;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 ::-webkit-scrollbar {
   height: 12px;
   width: 12px;
@@ -69,7 +74,8 @@ body {
 }
 
 .search {
-  margin-top: 5px;
+  margin-top: 2px;
+  border-radius: 10px;
 }
 .searchform input,
 .searchform button {
@@ -126,6 +132,10 @@ body {
   /* outline: 1px solid black; */
 }
 
+.user > :nth-child(2) {
+  margin-top: 14px;
+}
+
 .userIcon {
   font-size: 22px;
   color: white;
@@ -158,4 +168,12 @@ body {
 
 li {
   list-style-type: none;
+}
+
+.welcome-user {
+  margin-top: 18px;
+  padding: 8px 8px 8px 8px;
+  border-radius: 10px;
+  border: 1px solid rgb(6, 126, 255);
+  color: #0671b8;
 }

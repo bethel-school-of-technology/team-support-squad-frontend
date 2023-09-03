@@ -1,6 +1,23 @@
+
 .w-50 {
   width: 50%;
   max-width: 100%;
+
+Adjust the size and positioning of the image .left-container > img {
+  max-width: 80%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px;
+}
+
+/* Ensure the split screen layout stretches properly */
+.splitScreen {
+  display: flex;
+  align-items: stretch;
+  justify-content: center; /* Center the content horizontally */
+}
+
+/* Adjust container heights */
+.left-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,40 +40,4 @@
 @media (min-width: 992px) {
   
 } 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

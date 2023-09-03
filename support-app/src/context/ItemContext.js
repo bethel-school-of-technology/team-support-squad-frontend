@@ -25,11 +25,10 @@ export const ItemContextProvider = ({ children }) => {
       console.error("Error fetching item data:", error);
     }
   };
-  
 
   const updateItem = async (id, updatedItem) => {
     try {
-      await axios.put(`http://localhost:3001/items/${id}`, updatedItem);
+      await axios.patch(`http://localhost:3001/items/${id}`, updatedItem);
     } catch (error) {
       console.error("Error updating item:", error);
     }
@@ -37,10 +36,35 @@ export const ItemContextProvider = ({ children }) => {
 
   const createItem = async (newItem) => {
     try {
-      const response = await axios.post("http://localhost:3001/items", newItem);
-      setItems([...items, response.data]); 
+      const user = JSON.parse(localStorage.getItem("user"));
+      console.log(user);
+      const response = await axios.post("http://localhost:3001/items", {
+        ...newItem,
+        user_id: user.id,
+      });
+      setItems([...items, response.data]);
     } catch (error) {
       console.error("Error creating item:", error);
+    }
+  };
+
+  const deleteItem = async (id) => {
+    try {
+      await axios.delete(`http://localhost:3001/items/${id}`);
+      setItems(items.filter((item) => item.id !== id)); // Updates the local state after deletion
+    } catch (error) {
+      console.error("Error deleting item:", error);
+    }
+  };
+
+  const getItemsByUserId = async (userId) => {
+    try {
+      const response = await axios.get(
+        `http://localhost:3001/items/user/${userId}`
+      );
+      return response.data;
+    } catch (error) {
+      console.error("Error fetching user's items:", error);
     }
   };
 
@@ -51,7 +75,9 @@ export const ItemContextProvider = ({ children }) => {
         getAllItems,
         getItem,
         updateItem,
-        createItem
+        createItem,
+        deleteItem,
+        getItemsByUserId,
       }}
     >
       {children}
