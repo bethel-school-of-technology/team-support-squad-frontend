@@ -1,7 +1,7 @@
-
 .w-50 {
   width: 50%;
   max-width: 100%;
+}
 
 Adjust the size and positioning of the image .left-container > img {
   max-width: 80%; /* Make the image responsive */
@@ -29,7 +29,6 @@ Adjust the size and positioning of the image .left-container > img {
     width: 100%; 
   }
 }
-
 
 @media (min-width: 768px) and (max-width: 991px) {
   .w-50 {

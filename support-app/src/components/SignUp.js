@@ -1,9 +1,8 @@
-
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useUserContext } from "../context/UserContext";
 import "../stylesheet/Signup.css";
-import signupImg from "../assets/Img1.jpg";
+import signupImg from "../assets/Img1.png";
 
 import {
   CDBInput,
@@ -13,9 +12,7 @@ import {
   CDBBtn,
   CDBLink,
   CDBContainer,
-
 } from "cdbreact";
-// import signupImage from '../assets/signup-image.jpg';
 import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
 import { Link } from "react-router-dom";
 
@@ -63,10 +60,9 @@ const Signup = () => {
           <CDBInput label="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
           <CDBInput label="Full Name" type="text" value={fullName} onChange={(e) => setFullName(e.target.value)} />
           <CDBInput label="Phone Number" type="tel" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
-          <CDBBtn color="dark" outline className="btn-block my-3 mx-0" style={{ background: 'pink', color: 'white', border: 'none', fontWeight: 'bolder'}}>
-            Sign up
-
-          </CDBBtn>
+          <form onSubmit={handleSubmit}>
+    <CDBBtn type="submit" color="dark" outline className="btn-block my-3 mx-0" style={{ background: 'pink', color: 'white', border: 'none', fontWeight: 'bolder'}}>Sign up</CDBBtn></form>
+          
           <p className="text-center"> or sign up with</p>
           <div className="flex-row mb-3 d-flex justify-content-center">
             <CDBBtn style={{ backgroundColor: 'DodgerBlue', color: 'white' }} className="m-0" outline>
