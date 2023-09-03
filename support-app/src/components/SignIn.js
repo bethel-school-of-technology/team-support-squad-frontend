@@ -8,17 +8,18 @@ const Signin = () => {
   const [password, setPassword] = useState('');
 
   const handleSignin = () => {
-    // Add your sign-in logic here
   };
 
   return (
     <CDBContainer className="d-flex align-items-center justify-content-center min-vh-100">
-      <CDBCard style={{ width: '30rem' }} className="form-container">
+      <CDBCard style={{ width: '25rem' }} className="form-container">
         <CDBCardBody className="mx-4">
-          <div className="text-center mt-4 mb-2">
-            <p className="h4 font-weight-bold"> Sign in </p>
+          <div className="text-center text-black mt-4 mb-2" style={{ marginBottom: '20px'}}>
+            <p className="h3 font-weight-bold"> Sign in </p>
           </div>
+          <div className="mb-2" style={{ marginTop: '40px'}}>
           <CDBInput label="Email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+          </div>
           <CDBInput label="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
           <p className="mt-n3 text-end ">
             <CDBLink className="p-0" to="#">
@@ -29,11 +30,13 @@ const Signin = () => {
             Sign in
           </CDBBtn>
           <p className="text-center"> or sign in with</p>
-          <div className="flex-row my-3 d-flex justify-content-center">
-            <CDBBtn color="white" className="m-0">
+
+          <div className="my-3 d-flex justify-content-center">
+            <CDBBtn style={{ backgroundColor: 'DodgerBlue', color: 'white', border: 'none', marginRight: '10px' }} className="m-0">
               <CDBIcon fab icon="facebook-f" />
             </CDBBtn>
-            <CDBBtn color="white" className="m-0">
+
+            <CDBBtn style={{ backgroundColor: 'DeepSkyBlue', color: 'white', border: 'none', marginRight: '10px' }} className="m-0">
               <CDBIcon fab icon="twitter" />
             </CDBBtn>
             <CDBBtn color="white" className="m-0">
@@ -43,9 +46,7 @@ const Signin = () => {
           <hr />
           <p className="text-center">
             Not a member?{' '}
-            {/* <CDBLink className="d-inline p-0" to="#"> */}
             <Link to="/sign-up">Sign Up</Link>
-            {/* </CDBLink> */}
           </p>
         </CDBCardBody>
       </CDBCard>
