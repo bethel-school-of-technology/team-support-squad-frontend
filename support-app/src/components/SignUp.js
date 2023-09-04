@@ -71,15 +71,19 @@ const Signup = () => {
             value={phoneNumber}
             onChange={(e) => setPhoneNumber(e.target.value)}
           />
-          <CDBBtn
-            color="dark"
-            outline
-            className="btn-block my-3 mx-0"
-            onClick={handleSubmit}
-          >
-            {" "}
-            Sign up{" "}
-          </CDBBtn>
+          <br />
+          <div className="signBtn">
+            <CDBBtn
+              color="dark"
+              outline
+              className="signUpBtn"
+              onClick={handleSubmit}
+            >
+              {" "}
+              Sign up{" "}
+            </CDBBtn>
+          </div>
+
           <p className="text-center"> or sign up with</p>
           <div className="flex-row mb-3 d-flex justify-content-center">
             <CDBBtn color="black" className="m-0" outline>

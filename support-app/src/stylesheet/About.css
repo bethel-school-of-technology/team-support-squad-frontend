@@ -1,7 +1,6 @@
 .about-section {
   background: white;
-  padding: 80px 0;
-  margin: 50px;
+  /* padding: 80px 0; */
 }
 
 .squad-list {
@@ -72,10 +71,6 @@ ul.squad-icons li s-media {
   white-space: pre-line;
 }
 
-.squad-info {
-  display: block;
-  margin-bottom: 0;
-}
 .squad-info p {
   color: #acacac;
   font-style: italic;

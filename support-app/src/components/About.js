@@ -23,7 +23,7 @@ function About() {
           </div>
           <div className="col-sm-6 col-md-4">
             <div className="squad-list">
-              <img src={SonalImg} alt="" width={600} className="squad-img" />
+              <img src={SonalImg} alt="" />
               <h3>Sonal Kheware</h3>
               <div className="squad-info">
                 <p>
@@ -123,15 +123,3 @@ function About() {
 }
 
 export default About;
-
-
-
-
-
-
-
-
-
-
-
-

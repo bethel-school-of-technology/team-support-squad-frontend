@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { useUserContext } from '../context/UserContext';
-import axios from 'axios';
-import { Link } from 'react-router-dom';
+import React, { useEffect, useState } from "react";
+import { useUserContext } from "../context/UserContext";
+import axios from "axios";
+import { Link } from "react-router-dom";
+import "../stylesheet/UserProfile.css";
 
 const UserProfile = () => {
   const { user } = useUserContext();
@@ -9,11 +10,12 @@ const UserProfile = () => {
 
   useEffect(() => {
     if (user) {
-      axios.get(`http://localhost:3001/items?user_id=${user.id}`)
-        .then(response => {
+      axios
+        .get(`http://localhost:3001/items?user_id=${user.id}`)
+        .then((response) => {
           setUserItems(response.data);
         })
-        .catch(error => {
+        .catch((error) => {
           console.error("Error fetching user's items:", error);
         });
     }
@@ -21,29 +23,81 @@ const UserProfile = () => {
 
   return (
     <div className="user-profile-container">
-      <h2>User Profile</h2>
-      {user ? (
-        <div>
-          <p><strong>Name:</strong> {user.fullName}</p>
-          <p><strong>Email:</strong> {user.email}</p>
-          <p><strong>Phone Number:</strong> {user.phoneNumber}</p>
-
-          <h3>Your Created Items:</h3>
-          {userItems && userItems.length > 0 ? (
-            <ul>
-              {userItems.map(item => (
-                <li key={item.id}>
-                  <Link to={`/items/${item.id}`}>{item.name}</Link>
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p>You haven't created any items yet.</p>
-          )}
+      <h1>
+        Support <small>is your one stop shop for supporting others...</small>
+      </h1>
+      <div className="profile-section">
+        <div class="profile-banner">
+          <img src="https://unsplash.it/975/300" alt="Profile banner" />
         </div>
-      ) : (
-        <p>Please sign in to view your profile.</p>
-      )}
+        <div class="profile-picture">
+          <img
+            src="http://unsplash.it/150/150"
+            alt="Profile Image"
+            className="profile-img"
+          />
+        </div>
+        <div class="profile-stats">
+          <ul>
+            <li>
+              1000 <span>Supports</span>
+            </li>
+            <li>
+              1,354 <span>Followers</span>
+            </li>
+            <li>
+              32 <span>Following</span>
+            </li>
+            <li>
+              324 <span>Supported</span>
+            </li>
+          </ul>
+        </div>
+        <section className="user-section">
+          {user ? (
+            <div>
+              <h2 className="profile-name">
+                <strong>Name:</strong> {user.fullName}
+              </h2>
+
+              {/* <p>
+            <strong>Email:</strong> {user.email}
+          </p>
+          <p>
+            <strong>Phone Number:</strong> {user.phoneNumber}
+          </p> */}
+              <div className="created-section">
+                <h3>Your Created Items:</h3>
+                <div className="supContainer-profile">
+                  {userItems && userItems.length > 0 ? (
+                    <ul>
+                      {userItems.map((item) => (
+                        <li key={item.id}>
+                          <Link to={`/items/${item.id}`}>
+                            <div className="items-container">
+                              <div className="left-s">
+                                <div className="name">
+                                  <span>{item.name}</span>
+                                </div>
+                                <span>${item.price}</span>
+                              </div>
+                              <img src={item.icon} alt="img" className="sImg" />
+                            </div>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p>You haven't created any items yet.</p>
+                  )}
+                </div>
+              </div>
+            </div>
+          ) : (
+            <p>Please sign in to view your profile.</p>
+          )}
+        </section>
+      </div>
     </div>
   );
 };

@@ -19,8 +19,7 @@ Adjust the size and positioning of the image .left-container > img {
   flex: 1; /* Take up available space */
   background-color: #f5f5f5; /* Add a background color */
 }
-
-.right-container {
+s .right-container {
   max-width: 350px;
   margin: 0 auto;
   padding: 20px;
