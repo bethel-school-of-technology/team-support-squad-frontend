@@ -57,9 +57,11 @@ const UserProfile = () => {
           {user ? (
             <div>
               <h2 className="profile-name">
-                <strong>Name:</strong> {user.fullName}
+                <strong></strong> {user.fullName}
               </h2>
-              <Link to="/create" className="create-button">Create Support</Link>
+              <Link to="/create" className="create-button">
+                Create Support
+              </Link>
               <div className="created-section">
                 <h3>Your Created Items:</h3>
                 <div className="supContainer-profile">
