@@ -3,7 +3,6 @@ import { useUserContext } from "../context/UserContext";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "../stylesheet/UserProfile.css";
-import "../stylesheet/Supports.css";
 
 const UserProfile = () => {
   const { user } = useUserContext();
@@ -60,6 +59,7 @@ const UserProfile = () => {
               <h2 className="profile-name">
                 <strong>Name:</strong> {user.fullName}
               </h2>
+              <Link to="/create" className="create-button">Create Support</Link>
               <div className="created-section">
                 <h3>Your Created Items:</h3>
                 <div className="supContainer-profile">
