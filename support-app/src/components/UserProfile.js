@@ -3,6 +3,7 @@ import { useUserContext } from "../context/UserContext";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "../stylesheet/UserProfile.css";
+import "../stylesheet/Supports.css";
 
 const UserProfile = () => {
   const { user } = useUserContext();
@@ -59,34 +60,25 @@ const UserProfile = () => {
               <h2 className="profile-name">
                 <strong>Name:</strong> {user.fullName}
               </h2>
-
-              {/* <p>
-            <strong>Email:</strong> {user.email}
-          </p>
-          <p>
-            <strong>Phone Number:</strong> {user.phoneNumber}
-          </p> */}
               <div className="created-section">
                 <h3>Your Created Items:</h3>
                 <div className="supContainer-profile">
                   {userItems && userItems.length > 0 ? (
-                    <ul>
+                    <>
                       {userItems.map((item) => (
-                        <li key={item.id}>
-                          <Link to={`/items/${item.id}`}>
-                            <div className="items-container">
-                              <div className="left-s">
-                                <div className="name">
-                                  <span>{item.name}</span>
-                                </div>
-                                <span>${item.price}</span>
+                        <Link to={`/items/${item.id}`} key={item.id}>
+                          <div className="items-container">
+                            <div className="left-s">
+                              <div className="name">
+                                <span>{item.name}</span>
                               </div>
-                              <img src={item.icon} alt="img" className="sImg" />
+                              <span>${item.price}</span>
                             </div>
-                          </Link>
-                        </li>
+                            <img src={item.icon} alt="img" className="sImg" />
+                          </div>
+                        </Link>
                       ))}
-                    </ul>
+                    </>
                   ) : (
                     <p>You haven't created any items yet.</p>
                   )}

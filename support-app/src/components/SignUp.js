@@ -55,48 +55,6 @@ const Signup = () => {
           <p className="h5 mt-2 py-3 font-weight-bold"> Sign up </p>
         </div>
         <CDBCardBody className="mx-4">
-
-          <CDBInput
-            label="Email"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <p className="text-muted text-center small mt-n4">
-            At least 8 characters and 1 digit
-          </p>
-          <CDBInput
-            label="Password"
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <CDBInput
-            label="Full Name"
-            type="text"
-            value={fullName}
-            onChange={(e) => setFullName(e.target.value)}
-          />
-          <CDBInput
-            label="Phone Number"
-            type="tel"
-            value={phoneNumber}
-            onChange={(e) => setPhoneNumber(e.target.value)}
-          />
-          <br />
-          <div className="signBtn">
-            <CDBBtn
-              color="dark"
-              outline
-              className="signUpBtn"
-              onClick={handleSubmit}
-            >
-              {" "}
-              Sign up{" "}
-            </CDBBtn>
-          </div>
-
-
           <CDBInput label="Email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
           <p className="text-muted text-center small mt-n4">At least 8 characters and 1 digit</p>
           <CDBInput label="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
