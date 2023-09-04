@@ -12,6 +12,22 @@
   }
 }
 
+.help-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px; /* Reduce top padding */
+  padding-bottom: 20px; /* Reduce bottom padding */
+}
+
+.help-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+
 @media (max-width: 480px) {
   .help-title {
     font-size: 20px;
@@ -75,11 +91,7 @@
   margin-left: 5px;
 }
 
-.help-title {
-  text-align: center;
-  font-size: 24px;
-  margin-bottom: 10px;
-}
+
 
 .section-description {
   font-size: 16px;
