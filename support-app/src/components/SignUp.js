@@ -55,6 +55,48 @@ const Signup = () => {
           <p className="h5 mt-2 py-3 font-weight-bold"> Sign up </p>
         </div>
         <CDBCardBody className="mx-4">
+
+          <CDBInput
+            label="Email"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <p className="text-muted text-center small mt-n4">
+            At least 8 characters and 1 digit
+          </p>
+          <CDBInput
+            label="Password"
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <CDBInput
+            label="Full Name"
+            type="text"
+            value={fullName}
+            onChange={(e) => setFullName(e.target.value)}
+          />
+          <CDBInput
+            label="Phone Number"
+            type="tel"
+            value={phoneNumber}
+            onChange={(e) => setPhoneNumber(e.target.value)}
+          />
+          <br />
+          <div className="signBtn">
+            <CDBBtn
+              color="dark"
+              outline
+              className="signUpBtn"
+              onClick={handleSubmit}
+            >
+              {" "}
+              Sign up{" "}
+            </CDBBtn>
+          </div>
+
+
           <CDBInput label="Email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
           <p className="text-muted text-center small mt-n4">At least 8 characters and 1 digit</p>
           <CDBInput label="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
@@ -63,6 +105,7 @@ const Signup = () => {
           <form onSubmit={handleSubmit}>
     <CDBBtn type="submit" color="dark" outline className="btn-block my-3 mx-0" style={{ background: 'pink', color: 'white', border: 'none', fontWeight: 'bolder'}}>Sign up</CDBBtn></form>
           
+
           <p className="text-center"> or sign up with</p>
           <div className="flex-row mb-3 d-flex justify-content-center">
             <CDBBtn style={{ backgroundColor: 'DodgerBlue', color: 'white' }} className="m-0" outline>

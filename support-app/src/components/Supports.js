@@ -21,7 +21,9 @@ const Supports = () => {
               <div className="name">
                 <span>{item.name}</span>
               </div>
-              <span>${item.price}</span>
+              <div className="price">
+                <span>${item.price}</span>
+              </div>
             </div>
             <img src={item.icon} alt="img" className="sImg" />
           </div>

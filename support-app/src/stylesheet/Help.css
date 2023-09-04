@@ -14,7 +14,7 @@
 
 @media (max-width: 480px) {
   .help-title {
-    font-size: 20px; 
+    font-size: 20px;
   }
 }
 
@@ -31,6 +31,7 @@
 }
 
 .help-title.blink {
+  text-align: center;
   animation: blink 1s infinite;
 }
 .help-title {
@@ -39,7 +40,6 @@
   margin: 50px;
   font-weight: bolder;
 }
-
 
 .section-card {
   background: rgb(210, 229, 249);
@@ -53,10 +53,8 @@
 }
 
 .section-card {
-  width: 90%; 
+  width: 90%;
 }
-
-
 
 .map-card {
   background-color: #fff;
@@ -66,11 +64,15 @@
   margin: 10px;
   width: 100%;
   text-align: center;
-
 }
 
 .map-card {
   width: 100%;
+}
+
+.contact-icon {
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
 .help-title {
@@ -86,20 +88,20 @@
 
 .help-description {
   text-align: center;
-  font-family:serif;
-  font-size:larger;
+  font-family: serif;
+  font-size: larger;
 }
 
 .section-title {
   font-size: 25px;
-  font-weight:bold;
+  font-weight: bold;
 }
 
 .phone-number {
   font-weight: bold;
 }
 .E-mail {
-  font-weight: bold
+  font-weight: bold;
 }
 
 .availability {
@@ -108,11 +110,3 @@
   text-align: center;
   margin-top: 50px;
 }
-
-
-
-
-
-
-
-  
